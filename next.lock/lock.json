@@ -1,0 +1,5 @@
+{
+  "https://cdn.jsdelivr.net/npm/@arcana/auth/dist/standalone/auth.esm.js": { "integrity": "sha512-OihGUIoEcmOLO5hEARONsYDa/ux/Apq23pjSRXfZC8tmLWf9GpymTbnQbr9q/2NebEvj1+6mIbn9XX0L57s2eQ==", "contentType": "application/javascript; charset=utf-8" },
+  "https://cdn.jsdelivr.net/npm/@arcana/auth@0.1.3/dist/standalone/auth.esm.js": { "integrity": "sha512-OihGUIoEcmOLO5hEARONsYDa/ux/Apq23pjSRXfZC8tmLWf9GpymTbnQbr9q/2NebEvj1+6mIbn9XX0L57s2eQ==", "contentType": "application/javascript; charset=utf-8" },
+  "version": 1
+}
