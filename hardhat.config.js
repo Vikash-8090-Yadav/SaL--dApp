@@ -17,7 +17,7 @@ module.exports = {
     hardhat:{},
     polygon :{
       url : "https://polygon-mumbai.infura.io/v3/95688893704a4d5bac083296c3547383",
-      accounts: ["0x37bc73c37be457345023a4530554b1483db764b5b49d80874d95a24c41713054"]
+      accounts: ["8de377277b10cfdb63f8030bf13a092dfba5e4b8b96bff9c5f95386e96115e5a"]
     }
   }
 };

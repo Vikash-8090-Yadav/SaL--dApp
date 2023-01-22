@@ -10,6 +10,8 @@ async function main(){
 }
 
 //  contract address : 0x5F61cAacCEe71d36D7a3d9c1dE73Db9237e04505
+// 0x5179677c8e3B40791CFf2CB2dB4b154CE2a6C92B
+// 0x7c73D7e12b5eA8809B1261cF7b8513F6E6E5d528
 main()
 .then(()=>
   process.exit(0))
