@@ -3,7 +3,7 @@ import Image from "next/image"
 import polygon from './images/polygon.png'
 import spheron from './images/spheron.png'
 import arcana from './images/arcana.png'
-import cool from './images/cool.jpg'
+import cool from './images/cool.png'
 export default function About() {
     return (
       <>

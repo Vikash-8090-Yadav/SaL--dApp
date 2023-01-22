@@ -212,7 +212,7 @@ import Logout from "../Component/logout"
 import NavR from "../Component/navR"
 import { TailSpin } from "react-loader-spinner";
 
-import bb1 from "../images/bb1.jpg";
+import bb1 from "../images/bb1.png";
 import bb3 from "../images/bb3.png";
 import googlelogo from "../images/google-logo.png";
 import githublogo from "../images/github-logo.png";

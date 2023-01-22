@@ -7,7 +7,7 @@ import useAboutus from "./testinomialstyle"
 // import Img11 from '../public/1.png';
 // import Img22 from '../public/2.png';
 // import Img33 from './photos/img3.jpg';
-import cool from './images/cool.jpg'
+import cool from './images/cool.png'
 
 import {Box, Button, Typography, Rating, MobileStepper} from '@mui/material';
 
