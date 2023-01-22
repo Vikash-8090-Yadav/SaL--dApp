@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/styles": "^5.10.9",
     "cors": "^2.8.5",
+    "hardhat": "^2.12.6",
     "ipfs-http-client": "^57.0.3",
     "next": "^12.2.2",
     "postcss-reporter": "^7.0.5",
