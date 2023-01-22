@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@arcana/auth": "^0.1.1",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.2",
+    "@mui/material": "^5.11.5",
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/styles": "^5.10.9",
     "cors": "^2.8.5",
