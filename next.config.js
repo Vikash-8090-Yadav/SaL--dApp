@@ -4,6 +4,7 @@ const nextConfig = {
   // swcMinify: true,
   experimental: { urlImports: ["https://cdn.jsdelivr.net"] },
   images :{
+    unoptimized: true,
     domains :["ipfs.infura.io","sal-dapp.infura-ipfs.io"]
   }
 };
