@@ -151,7 +151,7 @@ export default function Home({
                 <option>S.D.E-2</option>
                 <option>Web Developer</option>
               </select>
-                <p>Enter amount in polygon (MATIC) you'd like to send</p>
+                <p>Enter amount in polygon MATIC youd like to send</p>
                   <Input
                   prefix=""
                   value={polygonAmount}
