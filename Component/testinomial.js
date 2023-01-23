@@ -17,21 +17,21 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const imagesHp = [
     {
         head1: 'John Alex',
-        para1: 'This division is not obsolete but has changed. Natural philosophy has split into the various natural sciences, especially astronomy, and cosmology. Moral philosophy has birthed the social sciences, but still includes value theory.',
-        para2: 'CEO Mabelya',
-        imaged: "./images/cool.jpg",
+        para1: 'I am impressed with the companys use of blockchain technology to store employee information. This adds an extra layer of security and ensures that all data is tamper-proof and easily accessible by authorized parties. The implementation of this system has greatly improved the efficiency and accuracy of our record-keeping. Well done !',
+        para2: 'CEO Binnnce',
+        imaged: "../images/vr.jpg",
     },
 
     {
         head1: 'Jessica Moore',
-        para1: 'This division is not obsolete but has changed. Natural philosophy has split into the various natural sciences, especially astronomy, and cosmology. Moral philosophy has birthed the social sciences, but still includes value theory.',
-        para2: 'CEO Mabelya',
+        para1: 'The companys implementation of blockchain technology for managing employee information is truly impressive. Not only does it provide unparalleled security for sensitive data, but it also makes the process of accessing and updating personal information much more efficient. The user interface is intuitive and easy to navigate, making it simple for me to manage my own information. I am grateful for the companys investment in this technology and for the dedication to maintaining the privacy and security of all employee information',
+        para2: 'User',
         imaged: "./images/cool.jpg",
     },
 
     {
         head1: 'John Doe',
-        para1: 'This division is not obsolete but has changed. Natural philosophy has split into the various natural sciences, especially astronomy, and cosmology. Moral philosophy has birthed the social sciences, but still includes value theory.',
+        para1: 'I am extremely impressed with the companys use of blockchain technology to not only manage employee information but also to pay salaries. This innovative approach ensures that all sensitive data is protected and tamper-proof while also providing a secure, efficient and transparent way of handling payroll. The system is user-friendly and easy to navigate, making it simple for me to access my salary information and transaction history. I appreciate the companys commitment to using cutting edge technology to streamline processes and enhance security. It gives me a lot of trust in the company for handling my personal and financial information ',
         para2: 'CEO Mabelya',
         imaged: "./images/cool.jpg",
     },
