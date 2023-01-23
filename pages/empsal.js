@@ -140,9 +140,9 @@ export default function Home({
                   footer={[
                   <Button key="submit" type="primary" onClick={connectToMetamask}>
                   Submit
-                  </Button>
+                  </Button>,
                   ]}
-              >
+                  >
                   
                   <select className="w-full px-3 py-2 placeholder-blue-300  rounded-md focus:outline-none focus:ring dark:placeholder-blue-500 dark:border-blue-600  dark:focus:border-blue-500 name text-name" >
                 <option>Position</option>
