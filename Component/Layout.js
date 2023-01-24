@@ -13,13 +13,17 @@ import Footer from "./footer"
 import Aboutus from "./testinomial"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
+import ChatwootWidget from './ChatwootWidget'
+import GoToTop from "./GoToTop";
 export default function Layout({children}) {
 
   console.log(children);
   return (
     <>
     <ToastContainer/>
+    <GoToTop/>
     <headerall className="  h-14 bg-gradient-to-r from-indigo-800 nav ">
+
     <NavL/>
     <NavM/>
     <NavR/>
@@ -28,6 +32,7 @@ export default function Layout({children}) {
     <lms className="container">
     <Lefts/>
     <div  className="mn-cnt">
+     
     <Mainc>{children}</Mainc>
     </div>
     <Rights/>
