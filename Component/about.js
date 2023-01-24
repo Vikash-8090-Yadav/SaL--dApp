@@ -42,7 +42,7 @@ export default function About() {
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
 
-      <Image  src ={spheron} width ={400} height = {400} alt ="hero-image"/>  
+      <Image  src ={spheron} width ={400} height = {400} alt ="hero-image" className = "rounded-md duration-200 hover:scale-110 hover:overflow-hidden"/>  
 
         <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
 
@@ -94,7 +94,7 @@ We build powerful, simple tools and platforms for learners, educators, and devel
     </Link>
           </div>
         </div>
-        <Image  src ={arcana} width ={400} height = {430} alt ="hero-image"/>
+        <Image  src ={arcana} width ={400} height = {430} alt ="hero-image" className = "rounded-md duration-200 hover:scale-110 hover:overflow-hidden"/>
       </div>
     </div>
 
