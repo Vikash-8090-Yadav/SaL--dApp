@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Footer () {
   return (
-
 <footer   class="p-4 bg-white sm:p-6 dark:bg-gray-900  ff">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -76,6 +75,7 @@ export default function Footer () {
             </a>
         </div>
     </div>
+    
 </footer>
 
   )
