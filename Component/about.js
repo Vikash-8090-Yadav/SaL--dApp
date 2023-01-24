@@ -34,7 +34,7 @@ export default function About() {
     </Link>
           </div>
         </div>
-        <Image  src ={polygon} width ={400} height = {400} alt ="hero-image"/>      </div>
+        <Image  src ={polygon} width ={400} height = {400} alt ="hero-image"  className = "rounded-md duration-200 hover:scale-110 hover:overflow-hidden"/>      </div>
     </div>
 
 
