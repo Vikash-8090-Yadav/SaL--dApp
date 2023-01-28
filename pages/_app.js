@@ -211,14 +211,18 @@ import styles from '../styles/Home.module.css'
 import Logout from "../Component/logout"
 import NavR from "../Component/navR"
 import { TailSpin } from "react-loader-spinner";
-
 import bb1 from "../images/bb1.png";
 import bb3 from "../images/bb3.png";
 import googlelogo from "../images/google-logo.png";
 import githublogo from "../images/github-logo.png";
 import twitterlogo from "../images/twitter-logo.png";
 import discordlogo from "../images/discord-logo.png";
-
+import { useRouter } from 'next/router' 
+import { EthereumClient, modalConnectors, walletConnectProvider } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { configureChains, createClient, WagmiConfig } from 'wagmi'
+import { goerli } from 'wagmi'
+import { arbitrum, avalanche, bsc, fantom, mainnet, optimism, polygon, polygonMumbai } from 'wagmi/chains'
 
 // function MyApp({ Component,  pageProps = {}}) {
 //   return <>
@@ -234,6 +238,25 @@ import { ColorRing } from 'react-loader-spinner';
 
 
 import useArcanaAuth from './useArcanaAuth';
+
+if (!"2437b6ee508a24481ec9cfa2ff6ddadf") {
+  throw new Error('You need to provide NEXT_PUBLIC_PROJECT_ID env variable')
+}
+
+const projectId = "2437b6ee508a24481ec9cfa2ff6ddadf"
+
+// 2. Configure wagmi client
+const chains = [polygonMumbai,goerli,arbitrum, avalanche, bsc, fantom,optimism, polygon]
+const { provider } = configureChains(chains, [walletConnectProvider({ projectId })])
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors: modalConnectors({ appName: 'web3Modal', chains }),
+  provider
+})
+
+// 3. Configure modal ethereum client
+export const ethereumClient = new EthereumClient(wagmiClient, chains)
+
 
 function MyApp({ Component, pageProps = {} }) {
   const [loading, setLoading] = useState(true);
@@ -280,7 +303,11 @@ function MyApp({ Component, pageProps = {} }) {
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-
+  const { pathname } = useRouter()
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    setReady(true)
+  }, [])
 
   return (
     <div>
@@ -291,17 +318,29 @@ function MyApp({ Component, pageProps = {} }) {
             <div className={styles.heading}>WELCOME TO SAL DAPP ...</div>
           </div>
           ) : !loading && loggedIn ? (
-          <div>
-            <div className='big bg-gradient-to-r from-indigo-800'>
-              <button  onClick={handleLogout}>
-                LOGOUT <Logout/>
-              </button>
-            </div>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </div>
-          ) : (
+            <div>
+            {
+                ready ? (
+                    <div>
+                        <div className='big bg-gradient-to-r from-indigo-800'>
+                            <button onClick={handleLogout}>
+                                LOGOUT <Logout/>
+                            </button>
+                        </div>
+                        <WagmiConfig client={wagmiClient}>
+                            <Layout>
+                                <Component {...pageProps} />
+                            </Layout>
+                        </WagmiConfig>
+                        {pathname === '/custom' ? null : (
+                            <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+                        )}
+                    </div>
+                ) : null
+            }
+        </div>
+          )
+          : (
           <div>
             <div className={styles.na}>
               <Image className={styles.g1} src ={bb1} width ={1860} height = {490} alt ="hero-image"/></div>
