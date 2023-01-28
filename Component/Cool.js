@@ -3,7 +3,7 @@ import Image from "next/image"
 import hero from "../images/2.png";
 export default function  Cat() {
   return(
-    <div  className="hero">
+    <div  id ="Home" className="hero">
     <Image src ={hero} width ={4000} height = {1300}
 
     />
