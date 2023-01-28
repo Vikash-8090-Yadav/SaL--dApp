@@ -71,7 +71,7 @@ const Aboutus = () => {
   return (
       <>
 
-        <Box className={classes.about}>
+        <Box id = "About" className={classes.about}>
             <div className={classes.mainabout}>
                 <div className={classes.img_div}>
                     <div className={classes.right_div}>
