@@ -303,7 +303,8 @@ function MyApp({ Component, pageProps = {} }) {
           </div>
           ) : (
           <div>
-            <div className={styles.na}><Image className={styles.g1} src ={bb1} width ={1860} height = {490} alt ="hero-image"/></div>
+            <div className={styles.na}>
+              <Image className={styles.g1} src ={bb1} width ={1860} height = {490} alt ="hero-image"/></div>
             <div className={styles.login}>
               <div className={styles.left}>
                 <div>
