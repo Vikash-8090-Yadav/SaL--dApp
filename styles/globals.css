@@ -1,17 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100;
+  }
+}
+
 html{
   scroll-behavior: smooth;
 }
+
 body {
   /* background-image: url("../public/images/bck-eth.jpg"); */
   background: #efefef;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -24,13 +31,33 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+
 ul li{
   list-style: none;
 }
+
+/* Change Navbar Background on scroll */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 1rem;
+  color: #fff;
+  position: fixed;
+  z-index: 10000;
+}
+
+.navbar.active {
+  background:linear-gradient(to right bottom,#000, rgb(34, 34, 34), rgb(66, 66, 66), rgba(17,24,39,1));
+}
+
 wrapperM ul {
   display: flex;
-
 }
+
 wrapperM ul li{
   font-size: 20px;
   padding: 20px;
@@ -51,17 +78,17 @@ wrapperM ul li{
 .mn-cnt{
   display: flex;
   width: 80%;
-
 }
+
 .container{
+  width: 100vw;
   min-height: 0px;
   display: flex;
   flex-direction: row;
   max-width: 200vh;
   justify-content: space-between;
-  padding: 13px 1%;
+  /* padding: 13px 1%; */
   /* background-color: blue; */
-
 }
 
 .left-sidebar{
@@ -70,8 +97,8 @@ wrapperM ul li{
   position: sticky;
   top: 70px;
   align-self: flex-start;
-
 }
+
 /* .main-content{
   min-height: 0px;
   height: 90vh;
@@ -98,12 +125,13 @@ wrapperM ul li{
   margin-bottom: 30px;
   color: #626262;
   width: fit-content;
-
 }
+
 .imp-link a img{
   width: 25px;
   margin-right: 15px;
 }
+
 .imp-link{
   border-bottom: 1px solid #ccc;
 }
@@ -244,7 +272,7 @@ wrapperM ul li{
 }
 .Category{
   padding: 10px 15px;
-  background-color: ;
+  /* background-color: ; */
   margin: 0px 15px;
   border-radius: 8px;
   font-family: 'Poppins';
@@ -255,14 +283,14 @@ wrapperM ul li{
   border: 2px solid yellow;
   max-width:100vh;
   margin-top: 20px;
-  &:hover{
-    transform: translateY(10px);
-    transition: transform 1.5s;
-  }
+  /* &:hover{ */
+    /* transform: translateY(10px); */
+    /* transition: transform 1.5s; */
+  /* } */
 
-  &:not(:hover){
-    transition: transform 0.5s;
-  }
+  /* &:not(:hover){ */
+    /* transition: transform 0.5s; */
+  /* } */
 }
 .CardImg{
   position: relative;
@@ -289,7 +317,7 @@ wrapperM ul li{
   display: flex;
   justify-content: space-between;
   margin: 2px 0px;
-  background-color: ;
+  /* background-color: ; */
   padding: 5px;
   cursor: pointer;
 }
@@ -330,9 +358,10 @@ wrapperM ul li{
   font-weight: bold;
 }
 
-.txt{
+/* .txt{ */
 
-}
+/* } */
+
 .big{
   color: white;
   /* width: 194vh; */

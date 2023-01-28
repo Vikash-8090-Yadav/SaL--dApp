@@ -1,10 +1,11 @@
-
-import NavL from "./navL"
-import NavM from "./navM"
-import NavR from "./navR"
+import Navbar from "./Navbar"
+// import NavL from "./navL"
+// import NavM from "./navM"
+// import NavR from "./navR"
 import Lefts from "./lft"
-import styles from "../styles/nav.module.css"
-import Rights from "./rht"
+import SideNavbar from "./SideNavbar"
+// import styles from "../styles/nav.module.css"
+// import Rights from "./rht"
 import Mainc from "./mnc"
 import Cat from "./Cool"
 import About from "./about"
@@ -13,40 +14,40 @@ import Footer from "./footer"
 import Aboutus from "./testinomial"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
-import ChatwootWidget from './ChatwootWidget'
+// import ChatwootWidget from './ChatwootWidget'
 import GoToTop from "./GoToTop";
 export default function Layout({children}) {
 
   console.log(children);
   return (
     <>
-    <ToastContainer/>
-    <GoToTop/>
-    <headerall className="  h-14 bg-gradient-to-r from-indigo-800 nav ">
+      <ToastContainer/>
+      <GoToTop/>
+      <Navbar/>
+      
+      <headerall className = " h-14 bg-gradient-to-r from-indigo-800 nav ">
+        {/* <NavL/> */}
+        {/* <NavM/> */}
+        {/* <NavR/> */}
+      </headerall>
 
-    <NavL/>
-    <NavM/>
-    <NavR/>
-    </headerall>
-    <Cat/>
-    <lms className="container">
-    <Lefts/>
-    <div  className="mn-cnt">
-     
-    <Mainc>{children}</Mainc>
-    </div>
-    <Rights/>
-    </lms>
-    {/*
-    THis lsm stand for the LEFT MAIN  and RIGHT-SIDE
-  */}
+      <Cat/>
 
-    <main className = " mn">
-      <About/>
-      <Aboutus />
-      <Contact/>
-         </main>
-         <Footer/>
+      <lms className = "h-screen flex justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
+        {/* <Lefts/> */}
+        <SideNavbar />
+        <div className = "flex-1 p-4 text-white bg-black">
+          <Mainc>{children}</Mainc>
+        </div>
+        {/* <Rights/> */}
+      </lms>
+    
+      <main className = "mn">
+        <About/>
+        <Aboutus />
+        <Contact/>
+      </main>
+      <Footer/>
     </>
   )
 }
