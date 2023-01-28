@@ -13,7 +13,7 @@ import {
 export default function Contact() {
     return (
       <>
-      <div  style={{fontFamily: "calibri",color: "#fff", background: 'rgb(2,0,36)',background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(153,10,121,1) 40%, rgba(0,212,255,1) 100%)',paddingTop:'80px', fontSize: "40px", textAlign: 'center', fontWeight: '100%',width:'100%', height: '30em'}}>
+      <div id = "Contact" style={{fontFamily: "calibri",color: "#fff", background: 'rgb(2,0,36)',background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(153,10,121,1) 40%, rgba(0,212,255,1) 100%)',paddingTop:'80px', fontSize: "40px", textAlign: 'center', fontWeight: '100%',width:'100%', height: '30em'}}>
         <h1>
          Have Query?
           Contact us Now!
