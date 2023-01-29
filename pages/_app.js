@@ -208,7 +208,8 @@ import Layout from "../Component/Layout"
 import '../styles/globals.css'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Logout from "../Component/logout"
+import Navbar from "../Component/Navbar"
+import LogoutButton from "../Component/LogoutButton"
 import NavR from "../Component/navR"
 import { TailSpin } from "react-loader-spinner";
 import bb1 from "../images/bb1.png";
@@ -223,7 +224,7 @@ import { Web3Modal } from '@web3modal/react'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { goerli } from 'wagmi'
 import { arbitrum, avalanche, bsc, fantom, mainnet, optimism, polygon, polygonMumbai } from 'wagmi/chains'
-
+import Footer from "../Component/footer"
 // function MyApp({ Component,  pageProps = {}}) {
 //   return <>
 //   <Layout>
@@ -322,15 +323,15 @@ function MyApp({ Component, pageProps = {} }) {
             {
                 ready ? (
                     <div>
-                        <div className='big bg-transparent'>
-                            <button onClick={handleLogout}>
-                                LOGOUT <Logout/>
-                            </button>
+                        <div className='big bg-gradient-to-r from-indigo-800'>  
                         </div>
                         <WagmiConfig client={wagmiClient}>
+                        <Navbar className='big bg-gradient-to-r from-indigo-800' handleLogout={handleLogout} />
                             <Layout>
+
                                 <Component {...pageProps} />
                             </Layout>
+                            
                         </WagmiConfig>
                         {pathname === '/custom' ? null : (
                             <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
