@@ -322,7 +322,7 @@ function MyApp({ Component, pageProps = {} }) {
             {
                 ready ? (
                     <div>
-                        <div className='big bg-gradient-to-r from-indigo-800'>
+                        <div className='big bg-transparent'>
                             <button onClick={handleLogout}>
                                 LOGOUT <Logout/>
                             </button>

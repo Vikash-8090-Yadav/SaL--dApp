@@ -25,18 +25,18 @@ export default function Layout({children}) {
       <GoToTop/>
       <Navbar/>
       
-      <headerall className = " h-14 bg-gradient-to-r from-indigo-800 nav ">
+      {/* <headerall className = ""> */}
         {/* <NavL/> */}
         {/* <NavM/> */}
         {/* <NavR/> */}
-      </headerall>
+      {/* </headerall> */}
 
       <Cat/>
 
-      <lms className = "h-screen flex justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
+      <lms className = "h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
         {/* <Lefts/> */}
         <SideNavbar />
-        <div className = "flex-1 p-4 text-white bg-black">
+        <div className = "flex-1 p-4 text-white bg-black border-1 border-dashed">
           <Mainc>{children}</Mainc>
         </div>
         {/* <Rights/> */}
