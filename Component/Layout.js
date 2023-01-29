@@ -16,14 +16,14 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
 // import ChatwootWidget from './ChatwootWidget'
 import GoToTop from "./GoToTop";
+import Random from "./Random"
 export default function Layout({children}) {
 
   console.log(children);
   return (
     <>
-      <ToastContainer/>
       <GoToTop/>
-      
+      <Random/>
       {/* <headerall className = ""> */}
         {/* <NavL/> */}
         {/* <NavM/> */}
