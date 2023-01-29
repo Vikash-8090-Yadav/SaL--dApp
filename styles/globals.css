@@ -390,3 +390,12 @@ wrapperM ul li{
   background-color: #1876f2;
 }
 
+
+/*
+For LogoutBUtton
+*/
+@media only screen and (max-width: 767px) {
+  .logoutbtn{
+    display: none;
+  }
+}
