@@ -23,7 +23,6 @@ export default function Layout({children}) {
     <>
       <ToastContainer/>
       <GoToTop/>
-      <Navbar/>
       
       {/* <headerall className = ""> */}
         {/* <NavL/> */}
