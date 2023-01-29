@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import {Link} from 'react-scroll';
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { useWeb3Modal, Web3Button, Web3NetworkSwitch } from '@web3modal/react'
-
-const Navbar = () => {
+import LogoutButton from "../Component/LogoutButton"
+import SalDappLogo from "../public/images/sal-Dapp.png"
+import Image from "next/image"
+const Navbar = ({ handleLogout }) => {
     const [nav, setNav] = useState(false);
     const [navBar, setNavBar] = useState(false);
 
@@ -30,22 +32,46 @@ const Navbar = () => {
             id: 3,
             link: "Contact",
         },
+        {
+            id: 4,
+            link: "Logout",
+        },
     ]
+
+    const handleLogout1=()=>{
+    return handleLogout={handleLogout}
+}
+const handleWeb3ButtonClick = () => {
+  // code to handle web3 button click
+  setLogoutVisible(true);
+}
     return (
         <>
             <div  className = {navBar ? 'navbar active' : 'navbar'}>
-                {/* <h1 className = "text-3xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-xl max-sm:ml-0 max-sm:mr-3 bg-transparent">Sal-dAPP.eth</h1> */}
+            <div className="flex">
+                <Image src = {SalDappLogo} height = "0" width = "49" alt = ""/>{  <h1 className = "text-3xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-xl max-sm:ml-0 max-sm:mr-3 ">DAPP.eth</h1> }
+                </div>
 
                 <ul className = "hidden md:flex text-yellow-300">
                     {links.map(({id, link}) => (
                         <li key = {id} className = "px-4 cursor-pointer md:hover:scale-125 duration-300 capitalize text-xl font-bold">
 
-                            <Link to={link} smooth duration={50}>{link}</Link>
+                            {link === 'Logout' ? 
+                          <a className = "hidden flex text-white " onClick={handleLogout}>{link}</a> : 
+                          <Link to={link} smooth duration={50}>{link}</Link>
+                        }
+                        
                         </li>
                     ))}
                 </ul>
                 
-                <Web3Button balance="show" icon="hide" label="Connect Wallet" /> 
+                <div className="flex ">
+                
+      <Web3Button balance="show" icon="hide" label="Connect Wallet" />
+
+                 { <div className = " my-2 px-0 logoutbtn"><LogoutButton   handleLogout={handleLogout}/></div> } 
+   
+  </div>
 
                 <div onClick={() => setNav(!nav)} className = "cursor-pointer pr-4 z-10 text-yellow-300 md:hidden">
                     {
