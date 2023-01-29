@@ -47,9 +47,9 @@ const handleWeb3ButtonClick = () => {
 }
     return (
         <>
-            <div  className = {navBar ? 'navbar active' : 'navbar'}>
+            <div  className = " my-1 flex-row" className = {navBar ? 'navbar active' : 'navbar'}>
             <div className="flex">
-                <Image src = {SalDappLogo} height = "0" width = "49" alt = ""/>{  <h1 className = "text-3xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-xl max-sm:ml-0 max-sm:mr-3 ">DAPP.eth</h1> }
+                <Image className="rounded-full" src = {SalDappLogo} height = "0" width = "39" alt = ""/>{  <h1 className = "text-3xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-xl max-sm:ml-0 max-sm:mr-3 ">DAPP.eth</h1> }
                 </div>
 
                 <ul className = "hidden md:flex text-yellow-300">
@@ -69,7 +69,7 @@ const handleWeb3ButtonClick = () => {
                 
       <Web3Button balance="show" icon="hide" label="Connect Wallet" />
 
-                 { <div className = " my-2 px-0 logoutbtn"><LogoutButton   handleLogout={handleLogout}/></div> } 
+                 { <div className = " py-1 pl-5 px-2 my-2  logoutbtn"><LogoutButton   handleLogout={handleLogout}/></div> } 
    
   </div>
 
