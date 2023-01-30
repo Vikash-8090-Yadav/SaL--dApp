@@ -256,17 +256,19 @@ wrapperM ul li{
   border-radius: 8px;
 }
 
-.HomeWrapper{
+/* .HomeWrapper{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100vh;
-}
+  width: 100vw;
+} */
 .FilterWrapper{
   display: flex;
   padding-right: 38px;
   margin-left: 182px;
   align-items: center;
+  justify-content: center;
   /* width: 100%; */
   margin-top: 15px;
 }
@@ -306,13 +308,12 @@ wrapperM ul li{
   flex-direction: row;
   width: 110vh;
   margin-top: 25px;
-
 }
-.bind-home-card{
+/* .bind-home-card{
   height: 100vh;
   overflow: scroll;
   width: 131.5%;
-}
+} */
 .CardData{
   display: flex;
   justify-content: space-between;

@@ -35,7 +35,7 @@ export default function Layout({children}) {
       <lms className = "h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
         {/* <Lefts/> */}
         <SideNavbar />
-        <div className = "flex-1 p-4 text-white bg-black border-1 border-dashed">
+        <div className = "flex-1 p-4 bg-gray-300">
           <Mainc>{children}</Mainc>
         </div>
         {/* <Rights/> */}
