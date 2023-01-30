@@ -176,7 +176,7 @@ function useArcanaAuth() {
   //Email Link/ Passwordless login
   const loginWithLink = async (email) => {
     if (initialized) {
-      await auth.loginWithLink(email);
+      await auth.loginWithLink(`${email}`);
       setLoggedIn(true);
     }
   };
