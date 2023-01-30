@@ -252,3 +252,11 @@
 .button_custom{
  @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-200;
 }
+
+/*.rightSideLogin{
+  box-shadow: 18px 17px 7px 8px rgba(230,227,227,0.64);
+}*/
+
+.left{
+    
+}
