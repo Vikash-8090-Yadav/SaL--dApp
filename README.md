@@ -36,13 +36,13 @@ Your introduction section goes here.
 
 ## 🚀 Setting up the project locally
 
-## The problem it solves
+## 🔍The problem it solves
 Your installation instructions go here.
 
-## Challenges we ran into
+## 💥 Challenges we ran into
 Your installation instructions go here.
 
-## How Our Project Aligns with the Following Hackathon Tracks 
+## 🏁 How Our Project Aligns with the Following Hackathon Tracks 
 Instructions on how to use the project go here.
 
 ### IPFS/FILECOIN
@@ -60,13 +60,13 @@ Information about options and configuration go here.
 ## REPLIT
 Information about options and configuration go here.
 
-## Technologies we used
+## 🛠️Technologies we used
 Examples of how to use the project go here.
 
-## Video Demo
+## 🎥 Video Demo
 Instructions on how to contribute to the project go here.
 
-## License
+## 🔖 License
 Information about the project's license goes here.
 
 
