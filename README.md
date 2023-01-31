@@ -19,14 +19,14 @@ To run this website on REPLIT  click on this link below
 
 - [Introduction](#introduction)
 - [Installation](#-setting-up-the-project-locally)
-- [The problem it solves](#the-problem-it-solves)
-- [Challenges we ran into](#challenges-we-ran-into)
-- [TRACK](#how-our-project-aligns-with-the-following-hackathon-tracks)
-  - [FILECOIN/IPFS](#ipfsfilecoin)
-  - [ETHEREUM + POLYGON](#ethereum--polygon)
-  - [FOSS](#foss)
-  - [ETHEREUM](#ethereum)
-  - [REPLIT](#replit)
+- [The problem it solves](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#the-problem-it-solves)
+- [Challenges we ran into](#-challenges-we-ran-into)
+- [TRACK](#-how-our-project-aligns-with-the-following-hackathon-tracks)
+  - [FILECOIN/IPFS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-ipfsfilecoin)
+  - [ETHEREUM + POLYGON](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum--polygon)
+  - [FOSS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-foss)
+  - [ETHEREUM](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum)
+  - [REPLIT](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-replit)
 - [Technologies we used](#technologies-we-used)
 - [Video Demo](#video-demo)
 - [License](#license)
@@ -43,21 +43,22 @@ Your installation instructions go here.
 Your installation instructions go here.
 
 ## 🏁 How Our Project Aligns with the Following Hackathon Tracks 
-Instructions on how to use the project go here.
 
-### IPFS/FILECOIN
+
+### 📁 IPFS/FILECOIN
 Instructions on how to use the project in the industry sector go here.
 
-### ETHEREUM + POLYGON
+
+### ⛓️ ETHEREUM + POLYGON
 Instructions on how to use the project in the finance sector go hetps://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.re.
 
-### FOSS
+### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1024px-Tux.svg.png" width="20" height="20"> FOSS
 Instructions on how to use the project in the technology sector go here.
 
-## ETHEREUM
+## ⚡️ ETHEREUM
 Information about options and configuration go here.
 
-## REPLIT
+## ☁️ REPLIT
 Information about options and configuration go here.
 
 ## 🛠️Technologies we used
