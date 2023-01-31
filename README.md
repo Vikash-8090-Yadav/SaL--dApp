@@ -15,9 +15,10 @@ To run this website on REPLIT  click on this link below
 
 # Sal-Dapp
 
-## Table of Contents
+## 📋 Table of Contents
 
 - [Introduction](#introduction)
+- [Installation](#-setting-up-the-project-locally)
 - [The problem it solves](#the-problem-it-solves)
 - [Challenges we ran into](#challenges-we-ran-into)
 - [TRACK](#how-our-project-aligns-with-the-following-hackathon-tracks)
@@ -30,8 +31,10 @@ To run this website on REPLIT  click on this link below
 - [Video Demo](#video-demo)
 - [License](#license)
 
-## Introduction
+## 💡Introduction
 Your introduction section goes here.
+
+## 🚀 Setting up the project locally
 
 ## The problem it solves
 Your installation instructions go here.
@@ -65,7 +68,7 @@ Instructions on how to contribute to the project go here.
 
 ## License
 Information about the project's license goes here.
-Note that the table of contents links to the corresponding sections in the file using the # symbol followed by the section name in lowercase and hyphenated form.
+
 
 
 
