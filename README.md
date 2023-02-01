@@ -28,7 +28,7 @@
   - [Ipfs]()
   - [Rep it]()
 - [Video Demo](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-video-demo)
-- [License]()
+- [License](https://github.com/Vikash-8090-Yadav/SaL--dApp/blob/main/README.md#-license)
 
 ## 💡Introduction
 The Sal-dApp provides an efficient platform for organizational administrators to effectively oversee and manage their employees' salaries by adding them as users and securely storing their information on IPFS/Filecoin network. The platform enables the administrator to process payments conveniently and seamlessly on both Matic and Ethereum blockchain networks.
