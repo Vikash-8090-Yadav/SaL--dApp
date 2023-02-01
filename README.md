@@ -18,17 +18,17 @@
 - [TRACK](#-how-our-project-aligns-with-the-following-hackathon-tracks)
   - [FILECOIN/IPFS](#-ipfsfilecoin)
   - [ETHEREUM + POLYGON](#%EF%B8%8F-ethereum--polygon)
-  - [FOSS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-foss)
-  - [ETHEREUM](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum)
-  - [REPLIT](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-replit)
-- [Technologies we used](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8Ftechnologies-we-used)
+  - [FOSS](#-foss)
+  - [ETHEREUM](#%EF%B8%8F-ethereum)
+  - [REPLIT](#%EF%B8%8F-replit)
+- [Technologies we used](#%EF%B8%8Ftechnologies-we-used)
 - [Proof](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Polygon](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Ethereum](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Ipfs](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Rep it](https://github.com/Vikash-8090-Yadav/SaL--dApp)
-- [Video Demo](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-video-demo)
-- [License](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-license)
+- [Video Demo](#-video-demo)
+- [License](#-license)
 
 ## 💡Introduction
 The Sal-dApp provides an efficient platform for organizational administrators to effectively oversee and manage their employees' salaries by adding them as users and securely storing their information on IPFS/Filecoin network. The platform enables the administrator to process payments conveniently and seamlessly on both Matic and Ethereum blockchain networks.
