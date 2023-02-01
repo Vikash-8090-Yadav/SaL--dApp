@@ -1,19 +1,13 @@
 # This repository is created under  SWOC  OPENSOURCE EVENT HACKATHON 
-<br>
-<h1>
-To run this website  click on this link below  <br>
-  https://sa-l-d-app.vercel.app/
+
+<img src="https://user-images.githubusercontent.com/85225156/215915297-5e1222b1-0ea6-43e3-ae87-e95530726132.png" width="985" height="430">
+
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/85225156/215914335-d9a35b88-99ae-4769-8b1d-3b7e8ca3f993.png" width="35" height="30">
+  <span style="color: yellow">Sal-dApp</span>
 </h1>
-<h1>
-To run this website on REPLIT  click on this link below  
- 
-[Run on Repl.it](https://replit.com/@17Vikashyadav/SaL-dApp)
-  
-  </h1>
-    
-
-
-# Sal-Dapp
+<p> <b>This Dapp allows an organization's admin to manage employee salaries by adding them as users and storing their info in IPFS /Filecoin  and making payments in Matic , Ethereum.</b> </p>
+<br>
 
 ## 📋 Table of Contents
 
@@ -28,13 +22,41 @@ To run this website on REPLIT  click on this link below
   - [ETHEREUM](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum)
   - [REPLIT](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-replit)
 - [Technologies we used](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8Ftechnologies-we-used)
+- [Proof]()
+  - [Polygon]()
+  - [Ethereum]()
+  - [Ipfs
+  - [Rep it]()
 - [Video Demo](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-video-demo)
 - [License]()
 
 ## 💡Introduction
-Your introduction section goes here.
+The Sal-dApp provides an efficient platform for organizational administrators to effectively oversee and manage their employees' salaries by adding them as users and securely storing their information on IPFS/Filecoin network. The platform enables the administrator to process payments conveniently and seamlessly on both Matic and Ethereum blockchain networks.
+
+### 	▶️ Experience the Live Site by Clicking the Link Below
+<br>
+<div align="center">
+  <table>
+    <tr>
+      <th>Deployed On</th>
+      <th>URL</th>
+    </tr>
+    <tr>
+      <td>Vercel</td>
+      <td> https://sa-l-d-app.vercel.app/</td>
+    </tr>
+    <tr>
+      <td>Repl it</td>
+      <td>https://replit.com/@17Vikashyadav/SaL-dApp</td>
+    </tr>
+  </table>
+</div>
+
+<br><br>
 
 ## 🚀 Setting up the project locally
+
+<br>
 
 ## 🔍The problem it solves
 As startups and established companies continue to flourish, **a common problem that exists in the industry is the mode of payment for employees**. To address this issue, we have developed a decentralized application utilizing blockchain technology that streamlines the payment process for startups and companies. **With this application, an organization's admin can easily send payments and manage employee salaries** in one central location, **eliminating** the need for multiple individuals to handle the task.
@@ -43,6 +65,9 @@ Using Blockchain technology we want to improve this problem for the payment stru
 **Our decentralized application** aims to simplify the process of paying employees by allowing a single admin to manage and distribute salaries for all employees in the company. By streamlining this process and **removing the need for multiple individuals to handle it**, startups and companies can save valuable resources and streamline their workflow. Additionally, the application is designed to pay employees based on their position, ensuring fair and efficient compensation for all employees
 
 We aim to leverage the advancements in blockchain technology to streamline the **traditional process of salary management for startups and companies, making it easily accessible with a single click**. Additionally, we plan to continue improving and expanding the application by incorporating features such as the ability for multiple startups and companies to register and manage their employee's additional details and try to make a blog section for this on the blockchain , ultimately making it a comprehensive tool for enhancing workflow and productivity.
+
+<br>
+
 ## 💥 Challenges we ran into
 During the development of this project, several obstacles were encountered and valuable lessons were learned. This was the team's first experience working with **Next.js, and they are pleased to have successfully created a functioning project.**
 
@@ -53,6 +78,8 @@ Aesthetics were improved by utilizing Tailwind CSS. Initially, the team *struggl
 However, to allow for proper testing by **judges, the "onlyOwner" modifier was removed **to enable full access to the application's capabilities. **Difficulty** was also encountered when attempting to **integrate a "Connect Wallet" button** across all components in the Next.js framework, requiring duplication of the feature in each necessary component.
 
 Efforts were made to minimize gas costs by simplifying the Solidity code and optimizing the contract.
+
+<br>
 
 ## 🏁 How Our Project Aligns with the Following Hackathon Tracks 
 
@@ -74,6 +101,8 @@ We are thrilled to be participating in the hackathon under the Ethereum track wi
 ## ☁️ REPLIT
 We are thrilled to be participating in the hackathon under the Repl.it track and utilizing the power of this free, open-source platform to seamlessly integrate the latest languages and technologies such as Node.js, JavaScript, MERN, Next.js, and React.js into our project. We have chosen to build our project using Next.js (Node.js) and have written all of our smart contract code in Solidity and JSX on Repl.it. While we faced some challenges, such as issues with replit.nix file integration and determining the proper entry point for our project, we were able to overcome these obstacles through utilizing the extensive documentation available on Repl.it. We are proud to announce that we have successfully deployed our project on Repl.it.
 
+<br>
+
 ## 🛠️Technologies we used
 | Technology | Description | URL |
 |----------|----------|----------|
@@ -86,15 +115,15 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 | Repl it | Online code editor | https://repl.it/ |
 | Ethereum | 	Decentralized blockchain platform for building decentralized applications | https://ethereum.org/ |
 </h4>
+
+<br>
+
 ## 🎥 Video Demo
-Instructions on how to contribute to the project go here.
+ll Soon update
+<br>
 
 ## 🔖 License
-Information about the project's license goes here.
-
-
-
-
+ll Soon update  
 
 
 
