@@ -81,7 +81,7 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 | Tawlind Css | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
 | Hardhat | Ethereum development environment | https://hardhat.org/ |
 | Etherjs | Ethereum JavaScript API | 	https://docs.ethers.org/v5/ |
-| Polygon Mumbai | Ethereum network on the Polygon network | https://developers.polygon.io/ |
+| Polygon Mumbai | Ethereum network on the Polygon network | https://polygon.technology/ |
 | Ipfs/Filecoin | Decentralized file storage and content distribution | https://ipfs.io/ & https://filecoin.io/ |
 | Repl it | Online code editor | https://repl.it/ |
 | Ethereum | 	Decentralized blockchain platform for building decentralized applications | https://ethereum.org/ |
