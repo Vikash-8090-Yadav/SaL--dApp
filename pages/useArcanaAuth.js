@@ -145,13 +145,13 @@
 
 
 
-import { AuthProvider,AppMode,} from "https://cdn.jsdelivr.net/npm/@arcana/auth@0.1.3/dist/standalone/auth.esm.js";
+import { AuthProvider,AppMode,} from "@arcana/auth";
 import { useEffect, useState } from "react";
 
 //Config
 // const appId = 2364;
 
-const appId = "3B01e48556c35033A3Df7BbF8F932Ee42b0dF557";
+const appId = "63f7b16fc2de070a2e8998e612e08e122b8a3053";
 
 let auth = new AuthProvider(appId);
 
