@@ -109,7 +109,7 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 | Tawlind Css | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
 | Hardhat | Ethereum development environment | https://hardhat.org/ |
 | Etherjs | Ethereum JavaScript API | 	https://docs.ethers.org/v5/ |
-| Polygon | Ethereum network on the Polygon network | https://polygon.technology/ |
+| Polygon | Polygon (formerly known as Matic Network) is a Layer 2 scaling solution for Ethereum that enables faster and cheaper transactions on the blockchain. It leverages Ethereum as its main backbone while adding its own network of sidechains, allowing for efficient scaling and interoperability with other Ethereum-based systems. | https://polygon.technology/ |
 | Ipfs/Filecoin | Decentralized file storage and content distribution | https://ipfs.io/ & https://filecoin.io/ |
 | Repl it | Online code editor | https://repl.it/ |
 | Ethereum | 	Decentralized blockchain platform for building decentralized applications | https://ethereum.org/ |
