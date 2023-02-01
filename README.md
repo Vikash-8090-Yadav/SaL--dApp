@@ -17,7 +17,7 @@
 - [Challenges we ran into](#-challenges-we-ran-into)
 - [TRACK](#-how-our-project-aligns-with-the-following-hackathon-tracks)
   - [FILECOIN/IPFS](#-ipfsfilecoin)
-  - [ETHEREUM + POLYGON](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum--polygon)
+  - [ETHEREUM + POLYGON](#%EF%B8%8F-ethereum--polygon)
   - [FOSS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-foss)
   - [ETHEREUM](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum)
   - [REPLIT](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-replit)
