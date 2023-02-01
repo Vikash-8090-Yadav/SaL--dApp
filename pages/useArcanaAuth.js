@@ -151,7 +151,7 @@ import { useEffect, useState } from "react";
 //Config
 // const appId = 2364;
 
-const appId = "63f7b16fc2de070a2e8998e612e08e122b8a3053";
+const appId = "a9c3f5cccedabe75c9582b8ec92d4345e533d05c"
 
 let auth = new AuthProvider(appId);
 
