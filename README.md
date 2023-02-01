@@ -13,10 +13,10 @@
 
 - [Introduction](#introduction)
 - [Installation](#-setting-up-the-project-locally)
-- [The problem it solves](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#the-problem-it-solves)
+- [The problem it solves](#the-problem-it-solves)
 - [Challenges we ran into](#-challenges-we-ran-into)
 - [TRACK](#-how-our-project-aligns-with-the-following-hackathon-tracks)
-  - [FILECOIN/IPFS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-ipfsfilecoin)
+  - [FILECOIN/IPFS](#-ipfsfilecoin)
   - [ETHEREUM + POLYGON](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum--polygon)
   - [FOSS](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#-foss)
   - [ETHEREUM](https://github.com/Vikash-8090-Yadav/SaL--dApp/edit/main/README.md#%EF%B8%8F-ethereum)
