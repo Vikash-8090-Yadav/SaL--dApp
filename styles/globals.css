@@ -54,6 +54,12 @@ ul li{
   background:linear-gradient(to right bottom,#000, rgb(34, 34, 34), rgb(66, 66, 66), rgba(17,24,39,1));
 }
 
+@media(max-width: 640px) {
+  .display {
+    display: none;
+  }  
+}
+
 wrapperM ul {
   display: flex;
 }
@@ -298,6 +304,7 @@ wrapperM ul li{
   position: relative;
   height: 120px;
   width: 100%;
+  z-index: 1;
 }
 .Cardsswapper{
   margin-left: 192px;
