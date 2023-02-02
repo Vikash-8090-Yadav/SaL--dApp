@@ -145,13 +145,13 @@
 
 
 
-import { AuthProvider,AppMode,} from "https://cdn.jsdelivr.net/npm/@arcana/auth@0.1.3/dist/standalone/auth.esm.js";
+import { AuthProvider,AppMode,} from "@arcana/auth";
 import { useEffect, useState } from "react";
 
 //Config
 // const appId = 2364;
 
-const appId = "3B01e48556c35033A3Df7BbF8F932Ee42b0dF557";
+const appId = "a9c3f5cccedabe75c9582b8ec92d4345e533d05c"
 
 let auth = new AuthProvider(appId);
 
@@ -160,7 +160,7 @@ function useArcanaAuth() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const initializeAuth = async () => {
-    await auth.init({ appMode: 2, position: "right" });
+    await auth.init({ appMode: 2, position: "left" ,alwaysVisible: false});
     setInitialized(true);
   };
 
@@ -176,7 +176,7 @@ function useArcanaAuth() {
   //Email Link/ Passwordless login
   const loginWithLink = async (email) => {
     if (initialized) {
-      await auth.loginWithLink(`${email}`);
+      await auth.loginWithLink(email);
       setLoggedIn(true);
     }
   };

@@ -23,8 +23,8 @@ export default function Layout({children}) {
     <>
       <GoToTop/>
 
-      {<Navbar/>}  
-      {/* comment if u r going with the login page as this component already passed in the pages/_app.js*/}
+      {/*<Navbar/>*/}  {/* comment if u r going with the login page as this component already passed in the pages/_app.js*/}
+
 
       {<Random/>} 
 
