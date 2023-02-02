@@ -160,7 +160,7 @@ function useArcanaAuth() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const initializeAuth = async () => {
-    await auth.init({ appMode: 2, position: "right" });
+    await auth.init({ appMode: 2, position: "left" ,alwaysVisible: false});
     setInitialized(true);
   };
 
@@ -176,7 +176,7 @@ function useArcanaAuth() {
   //Email Link/ Passwordless login
   const loginWithLink = async (email) => {
     if (initialized) {
-      await auth.loginWithLink(`${email}`);
+      await auth.loginWithLink(email);
       setLoggedIn(true);
     }
   };
