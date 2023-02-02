@@ -37,17 +37,8 @@ const SideNavbar = () => {
       <div className = {wrapperClasses} onMouseEnter = {onmouseover} onMouseLeave = {onmouseover} style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}>
         <div className = "flex flex-col">
           <div className = "flex items-center justify-between relative">
-            {/* <div className = "flex items-center pl-1 gap-4">
-              <MdOutlineDoubleArrow />
-                <span className = {classNames("mt-2 text-lg font-medium text-black", {
-                  hidden: toggleCollapse,
-                })}>
-                  Logo
-                </span>
-            </div> */}
-
             <button className = {collapseIconClasses} onClick = {handleSidebarToggle}>
-              <MdOutlineDoubleArrow />
+              <MdOutlineDoubleArrow className = "display" />
             </button>
           </div>
 
@@ -64,49 +55,49 @@ const SideNavbar = () => {
             <Link href = "/emplist">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {list} height = "25" width = "30" alt = ""/> 
-                  <span className = "m-5">Employee List</span>
+                  <span className = "m-5 max-sm:hidden">Employee List</span>
               </a>
             </Link>
 
             <Link href = "/empsal">
               <a className = "py-4 px-3 items-center w-full h-full"> 
                 <Image src = {wallet} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Pay Salary</span>
+                <span className = "m-5 max-sm:hidden">Pay Salary</span>
               </a>
             </Link>
 
             <Link href = "/contractbal">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {salary} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Contract Balance</span>
+                <span className = "m-5 max-sm:hidden">Contract Balance</span>
               </a>
             </Link>
 
             <Link href = "/">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {settings} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Important Announcement</span>
+                <span className = "m-5 max-sm:hidden">Important Announcement</span>
               </a>
             </Link>
 
             <Link href = "/">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {settings} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Latest News</span>
+                <span className = "m-5 max-sm:hidden">Latest News</span>
               </a>
             </Link>
 
             <Link href = "/">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {settings} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Contact Form</span>
+                <span className = "m-5 max-sm:hidden">Contact Form</span>
               </a>
             </Link>
 
             <Link href = "/">
               <a className = "py-4 px-3 items-center w-full h-full">
                 <Image src = {settings} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5">Settings</span>
+                <span className = "m-5 max-sm:hidden">Settings</span>
               </a>
             </Link>
 </div>
