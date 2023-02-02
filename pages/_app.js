@@ -231,7 +231,7 @@ function MyApp({ Component, pageProps = {} }) {
                     </button>
                 </div>
                 <div className="input-button">
-                    <button  onClick={() => login('google')} type='button' className={styles.button_custom}>
+                    <button  onClick={() => login('gtihub')} type='button' className={styles.button_custom}>
                         Sign In with Github <Image src={'/assets/github.svg'} width={25} height={25}></Image>
                     </button>
                 </div>
