@@ -221,7 +221,7 @@ function MyApp({ Component, pageProps = {} }) {
 
                 {/* login buttons */}
                 <div className="input-button">
-                    <button  onClick={() => loginWithLink('email')}  className={styles.button}>
+                    <button  onClick={() => loginWithLink(email)}  className={styles.button}>
                         Login
                     </button>
                 </div>
