@@ -212,7 +212,7 @@ function MyApp({ Component, pageProps = {} }) {
                 <div className={styles.input_group}>
                     <input 
                     value = {email}
-                    type="text"
+                    type="email"
                     placeholder='Email'
                     onChange={handleEmailChange}
                     className={styles.input_text}
