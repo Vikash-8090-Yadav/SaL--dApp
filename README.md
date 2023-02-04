@@ -2,6 +2,7 @@
 <img src="https://user-images.githubusercontent.com/85225156/215915297-5e1222b1-0ea6-43e3-ae87-e95530726132.png" width="885" height="430">
 
 <h1 align="center"> 
+
   <img src="https://user-images.githubusercontent.com/85225156/215914335-d9a35b88-99ae-4769-8b1d-3b7e8ca3f993.png" width="35" height="30">
   <span style="color: yellow">Sal-dApp</span>
 </h1>
@@ -29,6 +30,10 @@
 - [Video Demo](#-video-demo)
 - [License](#-license)
 
+
+
+
+ 
 ## 💡Introduction
 The Sal-dApp provides an efficient platform for organizational administrators to effectively oversee and manage their employees' salaries by adding them as users and securely storing their information on IPFS/Filecoin network. The platform enables the administrator to process payments conveniently and seamlessly on both Matic and Ethereum blockchain networks.
 
@@ -119,7 +124,7 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 
 ## 🎥 Video Demo
 ll Soon update
-<br>
+<br >
 
 ## 🔖 License
 ll Soon update  
