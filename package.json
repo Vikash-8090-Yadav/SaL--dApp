@@ -23,6 +23,7 @@
     "apollo-boost": "^0.4.9",
     "classnames": "^2.3.2",
     "cors": "^2.8.5",
+    "gun": "^0.2020.1239",
     "hardhat": "^2.12.6",
     "ipfs-http-client": "^57.0.3",
     "next": "^12.2.2",
