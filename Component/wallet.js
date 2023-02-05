@@ -5,7 +5,8 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import Logout from "./logout"
 import {ethers} from "ethers"
 import { Button } from '@mui/material';
-
+import { toast } from "react-toastify";
+const RPC = "https://polygon-mumbai.infura.io/v3/95688893704a4d5bac083296c3547383"
 const networks = {
     polygon:{
      chainId: `0x${Number(80001).toString(16)}`,
@@ -52,10 +53,19 @@ export default function   Wallet() {
 
    const connectToMetamask = async () => {
     const web3Modal = new Web3Modal()
+    if(web3.network !=="polygon"){
+            await window.ethereum.request({
+                method:"wallet_addEthereumChain",
+                params:[{
+                    ...networks["polygon"]
+                }]
+            })
+        }
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
     const address = await signer.getAddress()
+
     if (address && signer && provider) {
       requestPolygonTransaction(signer, address, provider)
     } else {
@@ -112,7 +122,7 @@ export default function   Wallet() {
         }
         let web3 = await new Web3(window.ethereum);
         console.log(web3.version)
-        if(web3.network !=="matic"){
+        if(web3.network !=="polygon"){
             await window.ethereum.request({
                 method:"wallet_addEthereumChain",
                 params:[{
