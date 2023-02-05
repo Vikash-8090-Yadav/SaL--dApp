@@ -21,6 +21,16 @@ import { goerli } from 'wagmi'
 import { arbitrum, avalanche, bsc, fantom, mainnet, optimism, polygon, polygonMumbai } from 'wagmi/chains'
 import Footer from "../Component/footer"
 import { useEffect, useState } from 'react'
+import { HiAtSymbol, HiFingerPrint } from "react-icons/hi";
+import Login from "./login"
+import Login1 from "./register"
+{/*This is for the gun js implementation*/}
+
+import Gun from 'gun/gun'
+import 'gun/sea'
+
+const gun = Gun()
+
 
 
 // Start un-comment  to run application  without login page 
@@ -107,6 +117,7 @@ export const ethereumClient = new EthereumClient(wagmiClient, chains)
 
 
 function MyApp({ Component, pageProps = {} }) {
+    const [show, setShow] = useState(false)
   const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState("");
   const [account, setAccount] = useState("");
@@ -169,6 +180,7 @@ function MyApp({ Component, pageProps = {} }) {
             <div>
             {
                 ready ? (
+
                     <div>
                         <div className='big bg-gradient-to-r from-indigo-800'>  
                         </div>
@@ -176,7 +188,7 @@ function MyApp({ Component, pageProps = {} }) {
                         <Navbar className='big bg-gradient-to-r from-indigo-800' handleLogout={handleLogout} />
                             <Layout>
 
-                                <Component {...pageProps} />
+                                <Component {...pageProps} gun={gun}/>
                             </Layout>
                             
                         </WagmiConfig>
@@ -190,63 +202,16 @@ function MyApp({ Component, pageProps = {} }) {
           )
           : (
 
-            <div className="flex h-screen bg-blue-400">
-            <div className="m-auto bg-slate-50  shadow-2xl drop-shadow-2xl  rounded-md w-3/5 h-3/4 grid lg:grid-cols-2">
-                <div className={styles.imgStyle}>
-                    <div className={styles.cartoonImg}></div>
-                    <div className={styles.cloud_one}></div>
-                    <div className={styles.cloud_two}></div>
-                </div>
-                <div className="right flex flex-col shadow-xl drop-shadow-xl justify-evenly ">
-                    <div className="text-center ">
-              
-        
-        <section className='w-3/4 h-3/4 mx-auto flex flex-col gap-10'>
-            <div className="title">
-                <h1 className='text-gray-800 text-4xl font-bold py-4'>Sal dAPP</h1>
-                <p className='w-3/4 mx-auto text-gray-400'> - - TRansparency in  one click - - </p>
-            </div>
-
-            {/* form */}
-            <form className='flex flex-col gap-5'>
-                <div className={styles.input_group}>
-                    <input 
-                    value = {email}
-                    type="email"
-                    placeholder='Email'
-                    onChange={handleEmailChange}
-                    className={styles.input_text}
-                    />
-                </div>
-
-                {/* login buttons */}
-                <div className="input-button">
-                    <button  onClick={() => loginWithLink(email)}  className={styles.button}>
-                        Login
-                    </button>
-                </div>
-                <div className="input-button">
-                    <button  onClick={() => login('google')} type='button' className={styles.button_custom}>
-                        Sign In with Google <Image src={'/assets/google.svg'} width="20" height={20} ></Image>
-                    </button>
-                </div>
-                <div className="input-button">
-                    <button  onClick={() => login('gtihub')} type='button' className={styles.button_custom}>
-                        Sign In with Github <Image src={'/assets/github.svg'} width={25} height={25}></Image>
-                    </button>
-                </div>
-
-            </form>
-
-            {/* bottom */}
+            <div>
+            {pageProps.path === '' ? (
+                                    <Login gun={gun} />
+                                    ) : pageProps.path === '/signup' ? (
+                                    <Login1 gun={gun} />
+                                    ) : (
+                                    <Login1/>
+                                    )}
             
-        </section>
-
-                    </div>
-                </div>
-            </div>
-  
-        </div>
+</div>
             
         )}
       </div>
