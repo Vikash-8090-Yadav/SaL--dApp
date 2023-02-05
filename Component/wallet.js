@@ -6,6 +6,14 @@ import Logout from "./logout"
 // <div className="lg">
 // <Logout/>
 // </div>
+const RPC = "https://polygon-mumbai.infura.io/v3/95688893704a4d5bac083296c3547383"
+async function  fn(){
+       const provider = await new  ethers.providers.JsonRpcProvider(
+  RPC
+  )
+   const bal  = await    provider.getBalance("");
+  alert(bal);
+}
 const networks = {
     // for ganache
     // development: {
@@ -38,7 +46,7 @@ const networks = {
 };
 
 export default function   Wallet() {
-    const [address , setAddress] = useState('');
+    const [show , setShow] = useState(false);
     const [balance , setBalance] = useState(' ');
     async function connectWallet(){
         if(typeof window.ethereum =="undefined"){
@@ -55,8 +63,8 @@ export default function   Wallet() {
             })
         }
         const accounts = await web3.eth.requestAccounts();
-        const Address =await  accounts[0];
-        setAddress(Address);
+        const Address =await  "0x7719E64418C13c3Ab97e6f8500E81ce1101e8C40";
+        
         await web3.eth.getBalance(Address,async function(err,res){
             if(err){
                 console.log("error->"+err);
@@ -65,6 +73,7 @@ export default function   Wallet() {
                 const finalbalance = web3.utils.fromWei(res)+ " "+networks["polygon"]["nativeCurrency"]["name"];
                 console.log("result->"+finalbalance);
                 setBalance(finalbalance);
+                setShow(true);
 
             }
         });
@@ -72,12 +81,13 @@ export default function   Wallet() {
   return (
     <>
      <Script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></Script>
-    <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></Script>
     <div  className="cnt" class="pt-2">
-        <div className=" text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 wallletwrapper" onClick={connectWallet}>
-            {balance == ''?<bl className="bl">0</bl>:<bl className="bl"><h2>{balance.slice(0,4)} {balance.slice(-5)}</h2></bl>}
-            {address == ''?<wl className="wl">Connect Wallet</wl>:<wl1 className="wl1"><h2>{address.slice(0,6)}...{address.slice(39)}</h2></wl1>}
-              </div>
+        <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 wallletwrapper" onClick={connectWallet}>
+            
+            {show == false ? <bl className="bl">Check Contract Balance</bl> : 
+            (balance == '' ? <bl className="bl">0</bl> : 
+            <bl className="bl"><h2>{balance.slice(0,4)} {balance.slice(-5)}</h2></bl>) } 
+              </button>
              </div>
     </>
   )
