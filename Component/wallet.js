@@ -88,6 +88,7 @@ export default function   Wallet() {
     try {
   const transaction = await signer.sendTransaction(transactionParameters);
   setIsModalOpen(false);
+  await transaction.wait();
   await Modal.success({
     title: 'Tx Success!'
   });
