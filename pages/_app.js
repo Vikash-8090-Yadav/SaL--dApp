@@ -173,6 +173,7 @@ function MyApp({ Component, pageProps = {} }) {
                         <div className='big bg-gradient-to-r from-indigo-800'>  
                         </div>
                         <WagmiConfig client={wagmiClient}>
+                        
                         <Navbar className='big bg-gradient-to-r from-indigo-800' handleLogout={handleLogout} />
                          
                             <Layout>
