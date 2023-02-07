@@ -407,3 +407,9 @@ For LogoutBUtton
     display: none;
   }
 }
+
+
+.part{
+  height:50vh;
+  width: 100%;
+}
