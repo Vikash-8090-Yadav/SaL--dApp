@@ -410,6 +410,14 @@ For LogoutBUtton
 
 
 .part{
+  position: relative;
+  height:100vh;
+  width: 100%;
+}
+
+.part1{
+  position: relative;
   height:50vh;
   width: 100%;
+  background-color:#3931a2;
 }
