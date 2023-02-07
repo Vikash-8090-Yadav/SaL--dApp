@@ -22,7 +22,7 @@ import { arbitrum, avalanche, bsc, fantom, mainnet, optimism, polygon, polygonMu
 import Footer from "../Component/footer"
 import { useEffect, useState } from 'react'
 
-
+import ParticleBack from "../Component/Particle"
 // Start un-comment  to run application  without login page 
 
 
@@ -174,6 +174,7 @@ function MyApp({ Component, pageProps = {} }) {
                         </div>
                         <WagmiConfig client={wagmiClient}>
                         <Navbar className='big bg-gradient-to-r from-indigo-800' handleLogout={handleLogout} />
+                         
                             <Layout>
 
                                 <Component {...pageProps} />
