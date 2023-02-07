@@ -123,14 +123,6 @@ export default function   Wallet() {
         }
         let web3 = await new Web3(window.ethereum);
         console.log(web3.version)
-        if(web3.network !=="polygon"){
-            await window.ethereum.request({
-                method:"wallet_addEthereumChain",
-                params:[{
-                    ...networks["polygon"]
-                }]
-            })
-        }
         const accounts = await web3.eth.requestAccounts();
         const Address =await  "0x7719E64418C13c3Ab97e6f8500E81ce1101e8C40";
         
