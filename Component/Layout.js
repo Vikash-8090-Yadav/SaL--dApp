@@ -16,25 +16,19 @@ import "react-toastify/dist/ReactToastify.css";
 // import ChatwootWidget from './ChatwootWidget'
 import GoToTop from "./GoToTop";
 import Random from "./Random"
+import ParticleBack from "./Particle"
 export default function Layout({children}) {
 
   console.log(children);
   return (
     <>
       <GoToTop/>
-
       {/*<Navbar/>*/}  {/* comment if u r going with the login page as this component already passed in the pages/_app.js*/}
-
-
+     
       {<Random/>} 
-
-      {/* <headerall className = ""> */}
-        {/* <NavL/> */}
-        {/* <NavM/> */}
-        {/* <NavR/> */}
-      {/* </headerall> */}
-
-      <Cat/>
+       <div className="part ">
+       <ParticleBack  />
+       </div>
 
       <lms className = "h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
         {/* <Lefts/> */}
