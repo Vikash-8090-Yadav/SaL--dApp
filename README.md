@@ -123,11 +123,11 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 <br>
 
 ## 🎥 Video Demo
-ll Soon update
+https://youtu.be/74lFjQw34pI
 <br >
 
 ## 🔖 License
-ll Soon update  
+MIT 
 
 
 
