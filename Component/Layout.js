@@ -1,47 +1,35 @@
-
-import NavL from "./navL"
-import NavM from "./navM"
-import NavR from "./navR"
-import Lefts from "./lft"
-import styles from "../styles/nav.module.css"
-import Rights from "./rht"
+import Carousel from "./Carousel";
+import SideNavbar from "./SideNavbar";
+import AboutApp from "./AboutApp";
+import Test from "./Test";
+import Contact from "./Contact";
+import Footer from "./Footer";
 import Mainc from "./mnc"
-import Cat from "./Cool"
-import About from "./about"
-import Contact from "./contact"
-import Footer from "./footer"
-import Aboutus from "./testinomial"
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css";
+
 export default function Layout({children}) {
 
   console.log(children);
   return (
     <>
-    <ToastContainer/>
-    <headerall className="  h-14 bg-gradient-to-r from-indigo-800 nav ">
-    <NavL/>
-    <NavM/>
-    <NavR/>
-    </headerall>
-    <Cat/>
-    <lms className="container">
-    <Lefts/>
-    <div  className="mn-cnt">
-    <Mainc>{children}</Mainc>
-    </div>
-    <Rights/>
-    </lms>
-    {/*
-    THis lsm stand for the LEFT MAIN  and RIGHT-SIDE
-  */}
-
-    <main className = " mn">
-      <About/>
-      <Aboutus />
-      <Contact/>
-         </main>
-         <Footer/>
+      <div>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+      </div>
+      
+      <div className = "">
+        <Carousel/> 
+         <lms className = "h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
+        <SideNavbar />
+        <div className = "flex-1 p-4 text-white bg-gray-300">
+          <Mainc>{children}</Mainc>
+        </div>
+      </lms>
+    
+        <AboutApp />
+        <Test />
+        <Contact />
+        <Footer />
+      </div>
     </>
   )
 }

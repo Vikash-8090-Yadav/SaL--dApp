@@ -3,17 +3,10 @@ import Script from "next/script";
 import { useState } from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
 import Logout from "./logout"
-// <div className="lg">
-// <Logout/>
-// </div>
+import {ethers} from "ethers"
+import { Button } from '@mui/material';
+
 const networks = {
-    // for ganache
-    // development: {
-    //  host: "127.0.0.1",     // Localhost (default: none)
-    //  port: 7545,            // Standard Ethereum port (default: none)
-    //  network_id: "*",       // Any network (default: none)
-    // },
-    // for polygon
     polygon:{
      chainId: `0x${Number(80001).toString(16)}`,
      chainName:"polygon",
@@ -27,19 +20,93 @@ const networks = {
      blockExplorerUrls:["https://mumbai.polygonscan.com/"]
 
     },
-    // for ropsten
-    // ropsten: {
-    //   provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
-    //   network_id: 3,       // Ropsten's id
-    //   gas: 5500000,        // Ropsten has a lower block limit than mainnet
-    //   confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
-    //   timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    //   skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+};
+
+
+import { Modal, Input, Tooltip } from 'antd'
+
+import Web3Modal from 'web3modal'
+import { ConfigProvider } from 'antd';
+// import { Button } from "antd";
+
+const providerOptions = {
+  /* See Provider Options Section */
 };
 
 export default function   Wallet() {
-    const [address , setAddress] = useState('');
-    const [balance , setBalance] = useState(' ');
+     const [isModalOpen, setIsModalOpen] = useState(false);
+  const [polygonAmount, setPolygonAmount] = useState();
+
+    const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const updateAmount = (e) => {
+    setPolygonAmount(e.target.value);
+  };
+
+
+   const connectToMetamask = async () => {
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const signer = provider.getSigner()
+    const address = await signer.getAddress()
+    if (address && signer && provider) {
+      requestPolygonTransaction(signer, address, provider)
+    } else {
+      alert("ERROR couldn't connect to metamask")
+    }
+  }
+
+    const requestPolygonTransaction = async (signer, address, provider) => {
+    
+    // check validity of addresses
+    if (
+      !ethers.utils.isAddress(address)
+    ) {
+      alert('ERROR invalid wallet addresses provided')
+      return
+    }
+  
+
+    const transactionParameters = {
+      from:address,
+      
+      
+      to: "0x7719E64418C13c3Ab97e6f8500E81ce1101e8C40", 
+      data: '0x',
+      value: ethers.utils.parseEther(polygonAmount),
+      gasLimit: ethers.utils.hexlify(210000),
+      gasPrice: ethers.utils.hexlify(parseInt(await provider.getGasPrice())),
+    }
+
+    try {
+  const transaction = await signer.sendTransaction(transactionParameters);
+  setIsModalOpen(false);
+  await transaction.wait();
+  await Modal.success({
+    title: 'Tx Success!'
+  });
+} catch (e) {
+  console.log('failed!')
+ await  Modal.error({
+    title: 'Oops transaction failed!',
+    content: 'please double check the amount and try again',
+  });
+}
+  }
+
+
+
+
+
+    const [show , setShow] = useState(false);
+    const [balance , setBalance] = useState(0);
     async function connectWallet(){
         if(typeof window.ethereum =="undefined"){
             console.log("PLease install the metamask");
@@ -55,8 +122,8 @@ export default function   Wallet() {
             })
         }
         const accounts = await web3.eth.requestAccounts();
-        const Address =await  accounts[0];
-        setAddress(Address);
+        const Address =await  "0x7719E64418C13c3Ab97e6f8500E81ce1101e8C40";
+        
         await web3.eth.getBalance(Address,async function(err,res){
             if(err){
                 console.log("error->"+err);
@@ -65,6 +132,7 @@ export default function   Wallet() {
                 const finalbalance = web3.utils.fromWei(res)+ " "+networks["polygon"]["nativeCurrency"]["name"];
                 console.log("result->"+finalbalance);
                 setBalance(finalbalance);
+                setShow(true);
 
             }
         });
@@ -72,13 +140,35 @@ export default function   Wallet() {
   return (
     <>
      <Script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></Script>
-    <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></Script>
     <div  className="cnt" class="pt-2">
-        <div className=" text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 wallletwrapper" onClick={connectWallet}>
-            {balance == ''?<bl className="bl">0</bl>:<bl className="bl"><h2>{balance.slice(0,4)} {balance.slice(-5)}</h2></bl>}
-            {address == ''?<wl className="wl">Connect Wallet</wl>:<wl1 className="wl1"><h2>{address.slice(0,6)}...{address.slice(39)}</h2></wl1>}
-              </div>
+        <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 wallletwrapper" onClick={connectWallet}>
+            
+            {show == false ? <bl className="bl">Check Contract Balance</bl> : 
+            (balance == 0 ? <bl className="bl">0</bl> : 
+            <bl className="bl"><h2>{balance.slice(0,4)} {balance.slice(-5)}</h2></bl>) } 
+              </button>
              </div>
+             <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"   onClick={() => setIsModalOpen(true)}>Donate Us</button>
+            <Modal
+                  title="Donate To Sal-Dapp"
+                  visible={isModalOpen}
+                  onOk={handleOk}
+                  onCancel={handleCancel}
+                  footer={[
+                  <Button key="submit" type="primary" onClick={connectToMetamask}>
+                  Submit
+                  </Button>,
+                  ]}
+                  >
+                <p>Enter amount in polygon MATIC youd like to send</p>
+                  <Input
+                  prefix=""
+                  value={polygonAmount}
+                  onChange={updateAmount}
+                  placeholder="50"
+                  suffix="matic"
+                />
+            </Modal>
     </>
   )
 }

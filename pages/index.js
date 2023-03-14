@@ -6,73 +6,81 @@ import EventIcon from '@mui/icons-material/Event';
 import Image from 'next/image';
 import { ethers } from 'ethers';
 import { useState } from 'react';
+import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 import Link from 'next/link'
 import { Button } from '@mui/material';
 import allemp from "../artifacts/contracts/Sal.sol/allemp.json"
 
 export default function Home({
-      AllData,
-      internData,
-      HRData,
-      SDEData,
-      WebData
-    }){
-      const[filter , setFilter] = useState(AllData);
+  AllData,
+  internData,
+  HRData,
+  SDEData,
+  WebData
+})
+
+{      
+  const[filter , setFilter] = useState(AllData);
+  const [expand, setExpand] = useState(false);
   return (
     <>
-    <div className="bind-home-card">
-  <div className = "HomeWrapper ">
-    <div className= "FilterWrapper sticky flex flex-col p-4 mt-4 bg-gray-100 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 ">
-      <div className="Filteraction " style ={{fontSize:40}}/>
-      <div className='Category  py-2 pr-4 pl-3 font-sans text-lg rounded text-gray-700 md:bg-transparent hover:bg-gray-100'  onClick={()=>setFilter(internData)} >Intern</div>
-      <div className='Category  py-2 pr-4 pl-3 font-sans text-lg hover:bg-gray-100 text-gray-700 rounded  md:hover:bg-transparent  md:p-0 ' onClick={()=>setFilter(HRData)}>H.R</div>
-      <div className='Category  py-2 pr-4 pl-3 font-sans text-lg hover:bg-gray-100 text-gray-700 rounded  md:hover:bg-transparent  md:p-0 ' onClick={()=>setFilter(WebData)}>Web Developer</div>
-      <div className='Category  py-2 pr-4 pl-3 font-sans text-lg  text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0 ' onClick={()=>setFilter(SDEData)}>S.D.E</div>
-    </div>
+      <div className="h-screen overflow-scroll flex flex-col">
+        <div className = "w-44 font-medium h-80 absolute right-12 max-sm:w-36 text-center z-50">
+          <button onClick = {() => setExpand((prev) => !prev)} className = "bg-white w-full p-2 flex items-center justify-around border-b-2 border-black text-black">
+            Select Profile
+            {!expand ? (
+              <AiFillCaretDown size = {20} />
+            ) : (
+              <AiFillCaretUp size = {20} />
+            )}
+          </button>
 
-
-      <div className='Cardsswapper '>
-      {filter?.map((e)=>{
-        return (
-
-          < div className='Card' key = {e.FirstName}>
-
-
-            <div className='p-3 border-spacing-1 border-2 bg-blue-100 bg-gradient-to-r    max-w-sm rounded overflow-hidden shadow-lg '>
-
-            <div className='CardImg'>
-              <Image layout ="fill" alt = "sal-dApp"
-              src = {"https://sal-dapp.infura-ipfs.io/ipfs/" + e.image}
-              />
+          {expand && (
+            <div className = "bg-white">
+              {
+                <ul className = "bg-white">
+                  <li className = "p-2 text-sm hover:bg-gray-400 cursor-pointer text-black" onClick={()=>setFilter(internData)}>Intern</li>
+                  <li className = "p-2 text-sm hover:bg-gray-400 cursor-pointer text-black" onClick={()=>setFilter(HRData)}>HR</li>
+                  <li className = "p-2 text-sm hover:bg-gray-400 cursor-pointer text-black" onClick={()=>setFilter(WebData)}>Web Developer</li>
+                  <li className = "p-2 text-sm hover:bg-gray-400 cursor-pointer text-black" onClick={()=>setFilter(SDEData)}>SDE</li>
+                </ul>
+              }
             </div>
-            <div className=" text-center text-3xl font-sans Title ">
-              {e.FirstName}
+          )}
+        </div>
 
-            < div className='CardData font-bold text-xl mb-2 text-gray-700 text-base '>
-              <div className = "Text font-bold text-xl mb-2">Owner<AccountBoxIcon/></div>
-              <div className = "Text font-bold text-xl mb-2"> {e.owner.slice(0,6)}...{e.owner.slice(39)}<AccountBoxIcon/> </div>
-            </div>
-            <div className ="CardData text-gray-700 text-base" >
-              <div className = "Text">Amount<AccountBoxIcon/></div>
-              <div className = "Text">100 MATIC<AccountBoxIcon/></div>
-            </div>
-            < div className= "CardData text-gray-700 text-base">
-              <div className = "Text"><EventIcon /></div>
-              <div className = "Text">{new Date(e.timestamp*1000).toLocaleString()}</div>
-            </div> </div> </div>
-            <Button>
-
-            </Button>
-          </div>
-
-
-        )
-      })
-}
-
+        <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mt-12">
+          {filter?.map((e)=>{
+            return (
+              <div className='Card' key = {e.FirstName}>
+                <div className='p-3 border-spacing-1 border-2 bg-blue-100 bg-gradient-to-r max-w-sm rounded overflow-hidden shadow-lg'>
+                  <div className='CardImg'>
+                    <Image layout ="fill" alt = "sal-dApp" src = {"https://sal-dapp.infura-ipfs.io/ipfs/" + e.image}/>
+                  </div>
+            
+                  <div className=" text-center text-3xl font-sans Title">
+                    {e.FirstName}
+                    <div className ='CardData font-bold mb-2 text-gray-700 text-base '>
+                      <div className = "Text font-bold text-xl mb-2">Owner<AccountBoxIcon/></div>
+                      <div className = "Text font-bold text-xl mb-2"> {e.owner.slice(0,6)}...{e.owner.slice(39)}<AccountBoxIcon/></div>
+                    </div>
+            
+                    <div className ="CardData text-gray-700 text-base" >
+                      <div className = "Text">Amount<AccountBoxIcon/></div>
+                      <div className = "Text">100 MATIC<AccountBoxIcon/></div>
+                    </div>
+                          
+                    <div className= "CardData text-gray-700 text-base">
+                      <div className = "Text"><EventIcon /></div>
+                      <div className = "Text">{new Date(e.timestamp*1000).toLocaleString()}</div>
+                    </div> 
+                  </div> 
+                </div>
+              </div>
+            )})
+          }
+        </div>
       </div>
-    </div>
-    </div>
     </>
   )
 }

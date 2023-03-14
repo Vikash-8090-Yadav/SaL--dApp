@@ -1,166 +1,54 @@
-.Spinner{
-  color: white;
-  background-color: black;
-  width: 200vh;
-  height: 100vh;
-  padding-right:22px;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.heading{
-  letter-spacing: 0.3em;
-  font-weight: 800px;
-  font-size: 1.9em;
-  padding-top: 12px;
-}
-
-.na{
-  background-color: #181919;
-}
-
-.login{
-  color: white;
-  background-color: #191918;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+.cartoonImg{
+  background: url('/assets/back.png') no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:0;
   width: 100%;
-  padding: 4%;
+  height: 110%;
+  background-size: cover;
+  background-position: 55% -40px;
+  z-index: 1;
 }
 
-.left{
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  font-size: 2.5em;
-  font-weight: 600;
-  text-align: right;
+.cloud_one{
+  background: url('/assets/cloud_1.png') no-repeat;
+  position: absolute;
+  top: 10%; left: 10%;
+  width: 180px;
+  height: 100px;
+  background-size: contain;
+  z-index: 1;
+  transform: translateX(290%);
+   animation: cloud_one 10s ease-in 5.9s infinite; 
 }
 
-.bb3{
-  margin: 2vh auto 5px;
+.cloud_two{
+  background: url('/assets/cloud_2.png') no-repeat;
+  position: absolute;
+  top: 49%;left: 50%;
+  width: 200px;
+  height: 100px;
+  background-size: contain;
+  z-index: 2;
+  transform: translateX(290%);
+   animation: cloud_two 8s ease-in .9s infinite; 
 }
 
-.right{
-  width: 50%;
-  font-weight: 600;
-  text-align: left;
-  font-size: 1.25em;
-}
-
-.h1{
-  font-size: 2.55em;
-}
-
-.h5{
-  text-align: left;
-  padding-top: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.center{
-  padding-top: 28px;
-}
-
-.b{
-  font-weight: 800;
-  width: 242px;
-  margin: 30px 22px -26px 32px;
-  height: 62px;
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: #231F20;
-  border-radius: 12px ;
-}
-
-.img{
-  margin-right: 1em;
-  display: flex;
-  padding-left: 19px;
-}
-
-.g{
-  padding-top: 12px;
-  margin-left: 1.1em;
-}
-
-.g2{
-  border-style: none;
-  border-radius: 92px;
-  background-color: white;
-}
-
-.footer{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  background-color: #353535;
-}
-
-.footerl{
-  display: flex;
-}
-
-.T{
-  font-size: 20px;
-  font-weight: bold;
-  margin-left:  17px;
-}
-
-.footerr{
-  display: flex;
-  align-items: flex-end;
-}
-
-.fr{
-  margin: 12px;
-}
-
-.copy{
-  font-weight: bold;
-  text-align: center;
-  background-color: #353535;
-  border-top: 1px solid #fff;
-  padding: 3px;
-  color: #fff;
-}
-
-
-@media(max-width: 992px) {
-  .login {
-    display: flex;
-    flex-direction: column;
-  }
-  .left, .right {
-    text-align: center;
-    width: 100%;
-  }
-  .h5 {
-    text-align: center;
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+/* css keyframes */
+@keyframes cloud_one{
+  0%{
+      transform: translateX(290%);
+  }100%{
+      transform: translateX(-250%);
   }
 }
 
-/* .big{
-  color: white;
-  width: 200vh;
-  font-weight: bold;
-  padding-right: 32px;
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: #1876f2;
-} */
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+@keyframes cloud_two{
+  0%{
+      transform: translateX(160%);
+  }100%{
+      transform: translateX(-250%);
+  }
 }
