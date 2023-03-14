@@ -51,7 +51,7 @@ The Sal-dApp provides an efficient platform for organizational administrators to
     </tr>
     <tr>
       <td>Repl it</td>
-      <td>https://replit.com/@17Vikashyadav/SaL-dApp</td>
+      <td>https://replit.com/@17Vikashyadav/SaL-DApp</td>
     </tr>
   </table>
 </div>
