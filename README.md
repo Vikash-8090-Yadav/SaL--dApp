@@ -12,7 +12,7 @@
 ## How to run locally !
 
 1. fork and Clone the repo 
-2. migare to the sal dapp directory `cd SaL--dApp`
+2. move to the sal dapp directory `cd SaL--dApp`
 3. run  `npm install ` on command prompt 
 4 . Run `npm run dev ` 
 
