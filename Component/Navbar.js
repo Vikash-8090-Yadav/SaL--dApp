@@ -89,11 +89,10 @@ const Navbar = ({ handleLogout }) => {
           <button className = "pl-8 py-4 text-xl font-bold">  
             <Web3Button balance="show" icon="hide" label="Connect Wallet" />
           </button>
-          {/* { 
-            <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-500 font-bold max-sm:p-1 max-sm:m-1">
-              <LogoutButton handleLogout={handleLogout}/>
-            </div> 
-          }  */}
+          <button className = "pl-4 py-4 text-xl font-bold">  
+          <LogoutButton handleLogout={handleLogout}/>
+          </button>
+          
         </div>
       </div>
     </>
