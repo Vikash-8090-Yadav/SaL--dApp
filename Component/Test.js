@@ -48,11 +48,13 @@ const Test = () => {
   return (
     <>
       <div name = "Data" className = "w-full py-5 bg-gradient-to-b from-black to-gray-800">
-        <h1 className = "text-4xl pt-8 pb-4 px-24 font-semibold max-md:text-center text-white">Happy Client Works</h1>
+        <h1 className = "text-4xl pt-8 pb-4 px-24 font-semibold text-center text-white">Happy Client <span className='text-blue-500'>Works</span></h1>
       
         <div className = "relative px-24 py-10">
           <Slider {...settings}>
-            {data.map((el, index) => <Card key = {index} img = {el.img} />)}
+            
+            {data.map((el, index) =><Card key = {index} img = {el.img} />)}
+            
           </Slider>
         </div>
       </div>
