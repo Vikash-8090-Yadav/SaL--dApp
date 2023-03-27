@@ -19,6 +19,7 @@ const Test = () => {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: true,
+		autoplay: true,
 		responsive: [
 			{
 				breakpoint: 1024,
