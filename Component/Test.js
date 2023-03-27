@@ -15,7 +15,7 @@ const Test = () => {
 	const settings = {
 		dots: true,
 		infinite: true,
-		speed: 500,
+		speed: 400,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: true,
