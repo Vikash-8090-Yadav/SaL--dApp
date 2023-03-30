@@ -39,7 +39,7 @@ function Contact() {
         <div className="flex flex-col justify-center p-8 bg-black lg:p-16 lg:pl-10 lg:w-1/2">
 
           <h5 className="mb-3 text-3xl text-white font-extrabold leading-none sm:text-4xl">
-            Oh, you're stuck? Dont worry
+            Oh, you're stuck? Don't worry,
           </h5>
           <p className="mb-8 text-blue-400 font-black">
           </p>
