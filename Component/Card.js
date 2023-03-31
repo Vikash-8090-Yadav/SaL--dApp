@@ -33,12 +33,12 @@ const Card = (data) => {
 
 							<div className="flex flex-row justify-center content-center">
 								<div className="justify-center">
-									<a
+									<button
 										className="bg-blue-500 p-2 rounded-lg text-white hover:bg-blue-800 text-center"
 										href="#"
 									>
 										Read More...
-									</a>
+									</button>
 								</div>
 							</div>
 							<div className="flex flex-row justify-center object-center">

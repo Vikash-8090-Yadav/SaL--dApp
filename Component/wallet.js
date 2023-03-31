@@ -140,15 +140,23 @@ export default function   Wallet() {
   return (
     <>
      <Script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></Script>
-    <div  className="cnt" class="pt-2">
-        <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 wallletwrapper" onClick={connectWallet}>
+     <div className="bg-white p-1 m-24">
+     <div className="bg-blue-900 m-10 p-5 rounded-lg">
+    <div  className="w-full flex flex-col items-center justify-center p-5 pt-10">
+        <h1 className="p-5 text-4xl text-white text-bold mt-2 mb-2">Check Contract Balance <span className="text-blue-400 text-bold">Here</span></h1>
+        <button className="text-white bg-blue-500 hover:bg-blue-700 rounded-full text-xl  px-5 py-2.5 mt-5 text-bold text-center mr-2 mb-8" onClick={connectWallet}>
             
-            {show == false ? <bl className="bl">Check Contract Balance</bl> : 
+            {show == false ? <bl className="">Get Balance</bl> : 
             (balance == 0 ? <bl className="bl">0</bl> : 
             <bl className="bl"><h2>{balance.slice(0,4)} {balance.slice(-5)}</h2></bl>) } 
               </button>
+            
+              <p className="text-lg text-white w-1/8 text-center m-5 text-bold">If you would like to donate us, Click the button given below!</p>
+              
+             <button className="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2"   onClick={() => setIsModalOpen(true)}>Donate Us</button>
              </div>
-             <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"   onClick={() => setIsModalOpen(true)}>Donate Us</button>
+             </div>
+             </div>
             <Modal
                   title="Donate To Sal-Dapp"
                   visible={isModalOpen}
@@ -169,6 +177,8 @@ export default function   Wallet() {
                   suffix="matic"
                 />
             </Modal>
+            
     </>
   )
 }
+
