@@ -147,15 +147,15 @@ function MyApp({ Component, pageProps = {} }) {
 
                         {/* login buttons */}
                         <div className = "input-button">
-                          <button  onClick={() => loginWithLink(email)}  className = "w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md py-3 text-gray-50 text-lg font-bold hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:border hover:border-blue-500 hover:text-gray-700">
+                          <button  onClick={() => loginWithLink(email)}  className = "w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md py-3 text-gray-50 text-lg font-bold hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:outline outline-offset-[-1.5px] hover:outline-blue-500 hover:text-gray-700">
                             Login
                           </button>
                         </div>
                 
                         <div className = "input-button flex">
                           <button  onClick={() => login('google')} type='button' className = "w-full py-3 flex justify-center gap-5">
-                            <Image src={'/assets/google.svg'} width = "30" height = "30"alt="" />
-                            <Image src={'/assets/github.svg'} width = "37" height = "37"alt="" />
+                            <Image src={'/assets/google.svg'} width = "37" height = "37" alt="google-sign-in" />
+                            <Image src={'/assets/github.svg'} width = "37" height = "37" alt="github-sign-in" />
                           </button>
                         </div>
                       </form>
