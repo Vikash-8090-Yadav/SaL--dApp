@@ -1,28 +1,31 @@
 import React, {useState} from 'react'
 import classNames from 'classnames'
-import {MdOutlineDoubleArrow} from 'react-icons/md'
+import {MdOutlineDoubleArrow, MdPersonAddAlt1, MdSettings} from 'react-icons/md'
+import {GiWallet} from 'react-icons/gi'
+import {FaClipboardList,FaFileInvoiceDollar} from 'react-icons/fa'
+import {ImBullhorn} from 'react-icons/im'
+import {IoNewspaper} from 'react-icons/io5'
+import {RiContactsFill} from 'react-icons/ri'
+import { useRouter } from 'next/router'
 import Link from "next/link"
-import Image from "next/image"
-import teamwork from "../public/images/Icon/teamwork.png"
-import list from "../public/images/Icon/to-do-list.png"
-import wallet from "../public/images/Icon/wallet.png"
-import salary from "../public/images/Icon/salary.png"
-import settings from "../public/images/Icon/setting.png"
 
 const SideNavbar = () => { 
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
+  const { pathname } = useRouter();
   const wrapperClasses = classNames("h-screen px-4 pt-8 pb-4 bg-white flex justify-between flex-col w-72",
   {
     ["w-72"]: !toggleCollapse, 
     ["w-20"]: toggleCollapse,
   });
 
-  const collapseIconClasses = classNames("p-4 rounded absolute right-0", {
-    "rotate-180": toggleCollapse,
+  const collapseIconClasses = classNames("p-4 rounded absolute right-0 rotate-180", {
+    "rotate-0": toggleCollapse,
   });
 
   const getNavItemClasses = classNames("flex flex-col items-center cursor-pointer rounded w-full overflow-hidden whitespace-nowrap");
+
+  const activeNavItemClasses = classNames("bg-[#eee] rounded-[10px] font-bold")
 
   const onmouseover = () => {
     setIsCollapsible(!isCollapsible);
@@ -46,61 +49,61 @@ const SideNavbar = () => {
           <div className = {getNavItemClasses}>
           
             <Link href = "/addemp">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {teamwork} height = "25" width = "30" alt = ""/> 
-                <span className = "m-5 font-bold text-lg">Add Employee</span>
+              <a className = {`${pathname === "/addemp" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <MdPersonAddAlt1 size={25} style={{display: "inline-block"}}/>
+                <span className = "m-5 max-sm:hidden">Add Employee</span>
               </a>
             </Link>
               
             <Link href = "/emplist">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {list} height = "25" width = "30" alt = ""/> 
-                  <span className = "m-5 max-sm:hidden">Employee List</span>
+              <a className = {`${pathname === "/emplist" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <FaClipboardList size={25} style={{display: "inline-block"}}/>
+                <span className = "m-5 max-sm:hidden">Employee List</span>
               </a>
             </Link>
 
             <Link href = "/empsal">
-              <a className = "py-4 px-3 items-center w-full h-full"> 
-                <Image src = {wallet} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/empsal" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}> 
+                <GiWallet size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Pay Salary</span>
               </a>
             </Link>
 
             <Link href = "/contractbal">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {salary} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/contractbal" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <FaFileInvoiceDollar size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Contract Balance</span>
               </a>
             </Link>
 
             <Link href = "/">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {settings} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/announcements" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <ImBullhorn size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Important Announcement</span>
               </a>
             </Link>
 
             <Link href = "/">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {settings} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/latestnews" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <IoNewspaper size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Latest News</span>
               </a>
             </Link>
 
             <Link href = "/">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {settings} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/contactform" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <RiContactsFill size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Contact Form</span>
               </a>
             </Link>
 
             <Link href = "/">
-              <a className = "py-4 px-3 items-center w-full h-full">
-                <Image src = {settings} height = "25" width = "30" alt = ""/> 
+              <a className = {`${pathname === "/settings" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
+                <MdSettings size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Settings</span>
               </a>
             </Link>
-</div>
+          </div>
           </div>
         </div>
       </div>
