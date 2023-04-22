@@ -1,4 +1,3 @@
-# This repository is created under  SWOC3  OPENSOURCE EVENT HACKATHON 
 <img src="https://user-images.githubusercontent.com/85225156/215915297-5e1222b1-0ea6-43e3-ae87-e95530726132.png" width="885" height="430">
 
 <h1 align="center"> 
