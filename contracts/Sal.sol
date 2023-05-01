@@ -2,8 +2,8 @@
 
 pragma solidity >0.7.0 <=0.9.0;
 
-import '@openzeppelin/contracts/token/ERC1155/IERC1155.sol';
-import '@openzeppelin/contracts/token/ERC1155/ERC1155.sol';
+import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
+import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
 contract Sal is ERC1155 {
 
@@ -50,13 +50,14 @@ contract Sal is ERC1155 {
         string name;
         string ownerName;
         uint256 [] employees;
+        bool isDeleted;
     }
 
 
     string public baseUri;
-    uint256 private currentEmployeeId = 0;
-    uint256 private currentOrganizationId = 0;
-    mapping(uint256 => Organization) /*private*/ public organizations;
+    uint256 private currentEmployeeId = 1;
+    uint256 private currentOrganizationId = 1;
+    mapping(uint256 => Organization) private organizations;
     mapping(uint256 => Employee) private employees;
     mapping(address => uint256[]) private yourOrganizations;
     mapping(address => uint256[]) private employeeAt;
@@ -91,8 +92,19 @@ contract Sal is ERC1155 {
         emit OrganizationRegistered(newId, block.timestamp, msg.sender);
     }
 
+
+    function deleteOrganization (uint256 _organizationId) external {
+        require(organizations[_organizationId].employees.length == 0, "SAL: Organization still has employees in it.");
+        require (organizations[_organizationId].owner == msg.sender, "SAL: Only owner can delete organization.");
+
+        organizations[_organizationId].isDeleted = true;
+
+        _burn(msg.sender, ORGANIZATION, 1);
+    }
+
+
     function registerEmployee (address _empAddress, string memory _name, uint256 _organizationId) external {
-        require (_organizationId >= 0 && _organizationId <= currentOrganizationId, "SAL: Invalid organiztionId passed.");
+        require (_organizationId >= 1 && _organizationId <= currentOrganizationId, "SAL: Organization with given id does not exist");
         require (organizations[_organizationId].owner == msg.sender, "SAL: Only owner can add employees.");
         require (!_checkEmployeeAt(_empAddress, _organizationId), "SAL: Employee is already added to organization.");
 
@@ -113,16 +125,43 @@ contract Sal is ERC1155 {
     }
 
 
-    function _checkEmployeeAt(address _user, uint256 _organizationId) internal view returns (bool) {
+    function deleteEmployee (uint256 _empId, uint256 _organizationId) external {
+        require (organizations[_organizationId].owner == msg.sender, "SAL: Only owner can add employees.");
+
+        uint256 len = organizations[_organizationId].employees.length;
+        uint256 c = 0;
+        uint256 [] memory newEmployees = new uint256[] (len - 1);
+        
+        bool found = false;
+        for (uint256 i = 0; i < organizations[_organizationId].employees.length; i++) {
+            if (organizations[_organizationId].employees[i] != _empId) {
+                newEmployees[c++] = organizations[_organizationId].employees[i];
+            }
+            else {
+                found = true;
+            }
+        }
+
+        if (!found) {
+                revert("SAL: Employee with given id was not found");
+        }
+
+        organizations[_organizationId].employees = newEmployees;
+
+        _burn(employees[_empId].empAddress, EMPLOYEE, 1);
+    }
+
+
+    function _checkEmployeeAt(address _user, uint256 _organizationId) internal view returns (bool isEmployeeAt) {
         uint256 [] memory empAt = employeeAt[_user];
 
         for(uint256 i = 0; i < empAt.length; i++) {
             if (empAt[i] == _organizationId) {
-                return true;
+                isEmployeeAt = true;
             }
-
-            return false;
         }
+
+        return isEmployeeAt;
     }
 
 
@@ -132,6 +171,16 @@ contract Sal is ERC1155 {
 
     function getUserEmployeeAt (address _user) public view returns (uint256[] memory) {
         return employeeAt[_user];
+    }
+
+    function getOrganizationById (uint256 _organizationId) public view returns (Organization memory) {
+        require (_organizationId >= 1 && _organizationId <= currentOrganizationId, "SAL: Organization with given id does not exist");
+        return organizations[_organizationId];
+    }
+
+    function getEmployeeById (uint256 _empId) public view returns (Employee memory) {
+        require (_empId >= 1 && _empId <= currentEmployeeId, "SAL: Employee with given id does not exist");
+        return employees[_empId];
     }
 }
 
