@@ -1,79 +1,180 @@
 // SPDX-License-Identifier: GPL-3.0
+
 pragma solidity >0.7.0 <=0.9.0;
 
+import '@openzeppelin/contracts/token/ERC1155/IERC1155.sol';
+import '@openzeppelin/contracts/token/ERC1155/ERC1155.sol';
 
+contract Sal is ERC1155 {
 
-contract allemp{
+    uint256 constant ORGANIZATION = 0;
+    uint256 constant EMPLOYEE = 1;
+    uint256 constant MAX_ORGANIZATIONS_COUNT = 10;
 
-    address [] public deployedSal;
+    enum PaymentType {
+        NATIVE,
+        SAL,
+        USDT
+    }
 
-    event salcreated(
-        string FirstName,
-        string LastName,
-        address indexed owner,
-        address salAddress,
-        string image,
-        uint indexed timestamp,
-        string indexed Position
+    event EmployeeRegistered (
+        uint256 indexed tokenId,
+        uint256 indexed organizationId,
+        uint256 timestamp,
+        address indexed empAddress
+    );
+    
+    event OrganizationRegistered (
+        uint256 indexed tokenId,
+        uint256 timestamp,
+        address indexed owner
     );
 
-    function addemp (
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Country,
-        string memory _image,
-        string memory _Position)
-        public {
-        Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
-        );
-        deployedSal.push(address(newSal));
+    event Payment (
+        uint256 indexed fromId,
+        uint256 indexed toId,
+        uint256 amount,
+        PaymentType ptype
+    );
 
-        emit salcreated(_FirstName,_LastName,msg.sender,address(newSal),_image, block.timestamp,_Position);
+    struct Employee {
+        uint256 id;
+        uint256 organizationId;
+        address payable empAddress;
+        string name;
     }
-}
+
+    struct Organization {
+        uint256 id;
+        address payable owner;
+        string name;
+        string ownerName;
+        uint256 [] employees;
+    }
 
 
-contract Sal{
-    string public FirstName;
-    string public LastName;
-    string public wallet_address;
-    string public Position;
-    string public Country;
-    string public image;
-
-    uint public recievedamnt;
-    address payable public owner;
+    string public baseUri;
+    uint256 private currentEmployeeId = 0;
+    uint256 private currentOrganizationId = 0;
+    mapping(uint256 => Organization) /*private*/ public organizations;
+    mapping(uint256 => Employee) private employees;
+    mapping(address => uint256[]) private yourOrganizations;
+    mapping(address => uint256[]) private employeeAt;
 
 
-    event donated(address indexed donar , uint indexed amount , uint indexed timestamp);
+    // IERC1155 userTokenContract;
 
-    constructor(
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Position,
-        string memory _Country,
-        string memory _image
-    )
+    constructor (string memory _baseUri) ERC1155 (_baseUri) {
+        baseUri = _baseUri;
+    }
+
+
+    function registerOrganization (
+        string memory _name,
+        string memory _ownerName
+    ) external 
     {
-        FirstName = _FirstName;
-        LastName = _LastName;
-        wallet_address = _wallet_ddress;
-        Position =_Position;
-        Country =_Country;
-        image = _image;
-        owner = payable(msg.sender);
+        require(getUserOrganizations(msg.sender).length <= MAX_ORGANIZATIONS_COUNT, "SAL: You cannot create more than 10 organizations.");
+        
 
+        uint256 newId = currentOrganizationId++;
+        
+        organizations[newId].id = newId;
+        organizations[newId].name = _name;
+        organizations[newId].ownerName = _ownerName;
+        organizations[newId].owner = payable(msg.sender);
 
+        yourOrganizations[msg.sender].push(newId);
+
+        _mint(msg.sender, ORGANIZATION, 1, "");
+
+        emit OrganizationRegistered(newId, block.timestamp, msg.sender);
     }
 
-    function donate () public payable {
-        owner.transfer(msg.value);
-        recievedamnt+=msg.value;
+    function registerEmployee (address _empAddress, string memory _name, uint256 _organizationId) external {
+        require (_organizationId >= 0 && _organizationId <= currentOrganizationId, "SAL: Invalid organiztionId passed.");
+        require (organizations[_organizationId].owner == msg.sender, "SAL: Only owner can add employees.");
+        require (!_checkEmployeeAt(_empAddress, _organizationId), "SAL: Employee is already added to organization.");
 
-        emit donated(msg.sender , msg.value ,block.timestamp);
+        uint256 newId = currentEmployeeId++;
+
+        employees[newId].id = newId;
+        employees[newId].organizationId = _organizationId;
+        employees[newId].name = _name;
+        employees[newId].empAddress = payable(_empAddress);
+
+        organizations[_organizationId].employees.push(newId);
+
+        employeeAt[_empAddress].push(_organizationId);
+
+        _mint(_empAddress, EMPLOYEE, 1, "");
+
+        emit EmployeeRegistered(newId, _organizationId, block.timestamp, _empAddress);
     }
 
+
+    function _checkEmployeeAt(address _user, uint256 _organizationId) internal view returns (bool) {
+        uint256 [] memory empAt = employeeAt[_user];
+
+        for(uint256 i = 0; i < empAt.length; i++) {
+            if (empAt[i] == _organizationId) {
+                return true;
+            }
+
+            return false;
+        }
+    }
+
+
+    function getUserOrganizations (address _user) public view returns (uint256[] memory) {
+        return yourOrganizations[_user];
+    }
+
+    function getUserEmployeeAt (address _user) public view returns (uint256[] memory) {
+        return employeeAt[_user];
+    }
 }
+
+
+// contract Sal{
+//     string public FirstName;
+//     string public LastName;
+//     string public wallet_address;
+//     string public Position;
+//     string public Country;
+//     string public image;
+
+//     uint public recievedamnt;
+//     address payable public owner;
+
+
+//     event donated(address indexed donar , uint indexed amount , uint indexed timestamp);
+
+//     constructor(
+//         string memory _FirstName,
+//         string memory _LastName,
+//         string memory _wallet_ddress,
+//         string memory _Position,
+//         string memory _Country,
+//         string memory _image
+//     )
+//     {
+//         FirstName = _FirstName;
+//         LastName = _LastName;
+//         wallet_address = _wallet_ddress;
+//         Position =_Position;
+//         Country =_Country;
+//         image = _image;
+//         owner = payable(msg.sender);
+
+
+//     }
+
+//     function donate () public payable {
+//         owner.transfer(msg.value);
+//         recievedamnt+=msg.value;
+
+//         emit donated(msg.sender , msg.value ,block.timestamp);
+//     }
+
+// }
