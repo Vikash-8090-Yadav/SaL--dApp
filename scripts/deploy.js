@@ -1,9 +1,11 @@
-const hre = require("hardhat");
+const {ethers} = require("hardhat");
+
 
 async function main(){
-  const allemp = await hre.ethers.getContractFactory("allemp")
+  const allemp = await ethers.getContractFactory("allemp")
+  const [deployer] = await ethers.getSigners();
 
-  const empadd = await allemp.deploy();
+  const empadd = await allemp.connect(deployer).deploy();
 
   await empadd.deployed();
   console.log("Factory deployed to:",empadd.address);
