@@ -16,7 +16,7 @@ function Footer() {
               </h4>
               <p className = "text-gray-500 pb-2">Join 25,000+ others and never miss out our Latest Updates.</p>
               <form action = "" className = "flex flex-row max-sm:flex-col max-sm:items-center">
-                <input type = "text" className = "text-gray-500 w-2/3 p-2 focus:border-blue-400 max-sm:mb-2" placeholder = "Enter your email" />
+                <input type = "text" className = "text-gray-500 w-2/3 p-2 focus:border-blue-400 max-sm:mb-2 mr-6" placeholder = "Enter your email" />
                 <button className = "bg-blue-500 hover:bg-blue-700 duration-300 w-1/3 p-2 font-semibold">Subscribe</button>
               </form>
             </div>
