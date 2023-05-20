@@ -17,20 +17,23 @@ contract allemp{
         string indexed Position
     );
 
-    function addemp (
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Country,
-        string memory _image,
-        string memory _Position)
-        public {
-        Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
+  function addemp (
+    string memory _FirstName,
+    string memory _LastName,
+    string memory /*_wallet_ddress*/, // Remove the unused parameter
+    string memory _Country,
+    string memory _image,
+    string memory _Position) 
+    public {
+    Sal newSal = new Sal(
+        _FirstName,_LastName,wallet_ddress,_Position,_Country,_image
         );
-        deployedSal.push(address(newSal));
+    deployedSal.push(address(newSal));
 
-        emit salcreated(_FirstName,_LastName,msg.sender,address(newSal),_image, block.timestamp,_Position);
+    emit salcreated(
+        _FirstName, _LastName, msg.sender, address(newSal), _image,
+        block.timestamp, _Position);
+
     }
 }
 
