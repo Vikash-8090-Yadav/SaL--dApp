@@ -1,6 +1,6 @@
 <!--Type in all the issues that have been fixed through this pull request ex : #1 -->
 
-## Fixes Issue
+## Fixes Issue 📜
 
 This PR fixes the following issues:
 
@@ -8,7 +8,7 @@ closes #issue-number
 
 <!-- Write down all the changes made-->
 
-## Changes proposed
+## Changes proposed 📝
 
 Here comes all the changes proposed through this PR
 
