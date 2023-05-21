@@ -8,12 +8,28 @@
 <p> <b>This Dapp allows an organization's admin to manage employee salaries by adding them as users and storing their info in IPFS /Filecoin  and making payments in Matic , Ethereum.</b> </p>
 <br>
 
-## How to run locally !
+## How to Run Locally
 
-1. fork and Clone the repo 
-2. move to the sal dapp directory `cd SaL--dApp`
-3. run  `npm install ` on command prompt 
-4 . Run `npm run dev ` 
+To run the Sal-dApp locally, follow these steps:
+1. Clone the repository:
+ ```bash
+ git clone https://github.com/Vikash-8090-Yadav/SaL--dApp.git
+ ```
+ 2. Navigate to the project directory:
+```bash
+cd SaL--dApp
+```
+3. Install the dependencies:
+```bash
+npm install
+```
+4. Start the development server:
+```bash
+npm run dev
+```
+5. Access the dApp:
+Open your web browser and visit http://localhost:3000 to interact with the SaL application.
+
 
 ## 📋 Table of Contents
 
