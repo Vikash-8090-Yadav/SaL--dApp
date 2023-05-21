@@ -301,8 +301,10 @@ ul li{
   z-index: 1;
 }
 .Cardsswapper{
+  max-height: 600px;
+  overflow: auto;
   margin-left: 192px;
-  padding-left: 132px;
+  padding-left: 50px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
