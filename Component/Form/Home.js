@@ -77,7 +77,7 @@ export default function Home({
 											<AccountBoxIcon />
 										</div>
 										<div className="Text">
-											{e.owner.slice(0, 6)}...
+											{e.owner.slice(0, 10)}...
 											{e.owner.slice(39)}
 											<AccountBoxIcon />
 										</div>
