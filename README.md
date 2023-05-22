@@ -31,6 +31,24 @@ npm run dev
 Open your web browser and visit http://localhost:3000 to interact with the SaL application.
 
 
+<div align="center">
+  <br>
+  <img src="https://img.shields.io/github/repo-size/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <br>
+  <img src="https://img.shields.io/github/forks/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <br>
+  <img src="https://img.shields.io/github/stars/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/commit-activity/y/Fenrir-04/Algo-Media?style=for-the-badge" />
+  
+</div>
+
+
+
 ## 📋 Table of Contents
 
 - [Introduction](#introduction)
@@ -50,7 +68,7 @@ Open your web browser and visit http://localhost:3000 to interact with the SaL a
   - [Ipfs](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Rep it](https://github.com/Vikash-8090-Yadav/SaL--dApp)
 - [Video Demo](#-video-demo)
-- [License](#-license)
+- [Contributing](#-contributing)
 
 
 
@@ -133,7 +151,7 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 | Technology | Description | URL |
 |----------|----------|----------|
 | Next Js | JavaScript framework for building server-rendered or statically-generated applications | https://nextjs.org/ |
-| Tawlind Css | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
+| Tailwind CSS | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
 | Hardhat | Ethereum development environment | https://hardhat.org/ |
 | Etherjs | Ethereum JavaScript API | 	https://docs.ethers.org/v5/ |
 | Polygon | Polygon (formerly known as Matic Network) is a Layer 2 scaling solution for Ethereum that enables faster and cheaper transactions on the blockchain. It leverages Ethereum as its main backbone while adding its own network of sidechains, allowing for efficient scaling and interoperability with other Ethereum-based systems. | https://polygon.technology/ |
@@ -147,6 +165,31 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 ## 🎥 Video Demo
 https://youtu.be/74lFjQw34pI
 
+
+
+## 🤝 Contributing
+
+Contributions to Algo-Media are always welcome! If you'd like to contribute, please follow these guidelines:
+Fork the repository.
+
+Create a new branch for your feature or bug fix:
+
+```
+git checkout -b feature/your-feature-name
+```
+Commit your changes:
+
+```
+git commit -m 'Add some feature'
+```
+Push the branch:
+
+```
+git push origin feature/your-feature-name
+```
+Open a pull request.
+
+We appreciate your contributions and thank you for helping us improve Algo-Media!
 
 <br >
 
