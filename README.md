@@ -8,6 +8,23 @@
 <p> <b>This Dapp allows an organization's admin to manage employee salaries by adding them as users and storing their info in IPFS /Filecoin  and making payments in Matic , Ethereum.</b> </p>
 <br>
 
+<div align="center">
+  <br>
+  <img src="https://img.shields.io/github/repo-size/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <br>
+  <img src="https://img.shields.io/github/forks/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <br>
+  <img src="https://img.shields.io/github/stars/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/Fenrir-04/Algo-Media?style=for-the-badge" />
+  <img src="https://img.shields.io/github/commit-activity/y/Fenrir-04/Algo-Media?style=for-the-badge" />
+  
+</div>
+
+
 ## How to run locally !
 
 1. fork and Clone the repo 
@@ -34,7 +51,7 @@
   - [Ipfs](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Rep it](https://github.com/Vikash-8090-Yadav/SaL--dApp)
 - [Video Demo](#-video-demo)
-- [License](#-license)
+- [Contributing](#-contributing)
 
 
 
@@ -131,6 +148,31 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 ## 🎥 Video Demo
 https://youtu.be/74lFjQw34pI
 
+
+
+## 🤝 Contributing
+
+Contributions to Algo-Media are always welcome! If you'd like to contribute, please follow these guidelines:
+Fork the repository.
+
+Create a new branch for your feature or bug fix:
+
+```
+git checkout -b feature/your-feature-name
+```
+Commit your changes:
+
+```
+git commit -m 'Add some feature'
+```
+Push the branch:
+
+```
+git push origin feature/your-feature-name
+```
+Open a pull request.
+
+We appreciate your contributions and thank you for helping us improve Algo-Media!
 
 <br >
 
