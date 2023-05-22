@@ -58,10 +58,10 @@ const Navbar = ({ handleLogout }) => {
     <>
       <div className='navbar bg-gradient-to-b from-gray-900 to-black flex justify-between items-center min-w-full overflow-hidden h-14 py-2 px-1 text-slate-300 fixed z-50'>
         <div className="flex">
-          <div className="w-10 h-10 px-2 pt-1">
-            <Image className="rounded-full" src={SalDappLogo} height="30" width="30" alt="" />
+          <div className="w-10 h-10 px-2 py-2 pt-2 cursor-pointer">
+            <Image className="rounded-full" src={SalDappLogo} height="32" width="30" alt="" />
           </div>
-          <h1 className="text-2xl font-bold text-blue-500 ml-2 max-md:text-base max-sm:ml-1 max-md:mr-3 font-title max-md:pt-2 pt-1">DAPP.eth</h1>
+          <h1 className="text-2xl font-bold text-blue-500 ml-2 max-md:text-base max-sm:ml-1 max-md:mr-3 cursor-default font-title max-md:pt-2 pt-1">DAPP.eth</h1>
         </div>
 
         <ul className="hidden center pl-6 md:flex text-blue-500">
