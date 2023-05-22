@@ -117,7 +117,7 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 | Technology | Description | URL |
 |----------|----------|----------|
 | Next Js | JavaScript framework for building server-rendered or statically-generated applications | https://nextjs.org/ |
-| Tawlind Css | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
+| Tailwind Css | Utility-first CSS framework for rapidly building custom designs | https://tailwindcss.com/ |
 | Hardhat | Ethereum development environment | https://hardhat.org/ |
 | Etherjs | Ethereum JavaScript API | 	https://docs.ethers.org/v5/ |
 | Polygon | Polygon (formerly known as Matic Network) is a Layer 2 scaling solution for Ethereum that enables faster and cheaper transactions on the blockchain. It leverages Ethereum as its main backbone while adding its own network of sidechains, allowing for efficient scaling and interoperability with other Ethereum-based systems. | https://polygon.technology/ |
