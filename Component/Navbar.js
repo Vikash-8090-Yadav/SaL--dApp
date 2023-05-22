@@ -56,7 +56,7 @@ const Navbar = ({ handleLogout }) => {
 
   return (
     <>
-      <div className='navbar bg-gradient-to-b from-gray-900 to-black flex justify-between items-center min-w-full overflow-hidden h-14 py-2 px-1 text-slate-300 fixed z-50'>
+      <div className='navbar w-screen  bg-gradient-to-b from-gray-900 to-black flex justify-between items-center  overflow-hidden h-14 py-2 px-1 text-slate-300 fixed z-50'>
         <div className="flex">
           <div className="w-10 h-10 px-2 pt-1">
             <Image className="rounded-full" src={SalDappLogo} height="30" width="30" alt="" />
