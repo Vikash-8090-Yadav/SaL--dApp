@@ -193,6 +193,13 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 
 <br >
 
+## Project Contributors
+
+<a href="https://github.com/Vikash-8090-Yadav/SaL--dApp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Vikash-8090-Yadav/SaL--dApp" />
+</a>
+
+
 ## Project Contributor (Member)
 
 <table>
