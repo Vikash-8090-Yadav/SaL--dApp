@@ -70,6 +70,7 @@ contract Sal{
     }
 
     function donate () public payable {
+    require(msg.sender==owner,"You are not the owner!");
         owner.transfer(msg.value);
         recievedamnt+=msg.value;
 
