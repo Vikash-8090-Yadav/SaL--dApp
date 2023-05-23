@@ -15,7 +15,7 @@ const Navbar = ({ handleLogout }) => {
     {
       id: 1,
 
-      link: "Text",
+      link: "Home",
       child: (
         <>
           <AiFillHome size={25} />
