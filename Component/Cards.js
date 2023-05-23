@@ -26,7 +26,7 @@ export default function Cards({
     <>
       <div className="h-screen overflow-scroll flex flex-col">
         <div className = "w-44 font-medium h-80 absolute right-12 max-sm:w-36 text-center z-50">
-          <button onClick = {() => setExpand((prev) => !prev)} className = "bg-white w-full p-2 flex items-center justify-around border-b-2 border-black text-black">
+          <button onClick = {() => setExpand((prev) => !prev)} className = "bg-white w-full p-2 flex items-center justify-around border-b-2 border-black text-black transition duration-1000">
             Select Profile
             {!expand ? (
               <AiFillCaretDown size = {20} />
