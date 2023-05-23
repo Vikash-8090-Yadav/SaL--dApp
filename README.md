@@ -66,7 +66,7 @@ Open your web browser and visit http://localhost:3000 to interact with the SaL a
   - [Polygon](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Ethereum](https://github.com/Vikash-8090-Yadav/SaL--dApp)
   - [Ipfs](https://github.com/Vikash-8090-Yadav/SaL--dApp)
-  - [Rep it](https://github.com/Vikash-8090-Yadav/SaL--dApp)
+  - [Replit](https://github.com/Vikash-8090-Yadav/SaL--dApp)
 - [Video Demo](#-video-demo)
 - [Contributing](#-contributing)
 
@@ -90,7 +90,7 @@ The Sal-dApp provides an efficient platform for organizational administrators to
       <td> https://sa-l-d-app.vercel.app/</td>
     </tr>
     <tr>
-      <td>Repl it</td>
+      <td>Replit</td>
       <td>https://replit.com/@17Vikashyadav/SaL-DApp</td>
     </tr>
   </table>
