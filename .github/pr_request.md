@@ -24,11 +24,10 @@ Here comes all the changes proposed through this PR
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
 - [ ] All new and existing tests passed.
-- [ ] This PR does not contain plagiarized content.
 - [ ] The title of my pull request is a short description of the requested changes.
-
+- [ ] I'm GSSOC'23 Contributor 
 <!--Add screen shots of the changed output-->
 
-## Screenshots
+## Screenshots | GIF's (Recommended) 📷
 
 Add all the screenshots which support your changes
