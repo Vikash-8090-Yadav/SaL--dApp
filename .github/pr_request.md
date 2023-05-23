@@ -18,8 +18,8 @@ Here comes all the changes proposed through this PR
 [X] - Correct
 -->
 
-## Check List (Check all the boxes which are applicable) <!--Follow the above conventions to check the box-->
-
+## Check List ✔ <!--Follow the above conventions to check the box-->
+please delete the options that are not relevant. In order to tick the check box just put x inside them for example [x] like this
 - [ ] My code follows the code style of this project.
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
