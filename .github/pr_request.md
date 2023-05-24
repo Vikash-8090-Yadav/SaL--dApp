@@ -25,7 +25,8 @@ please delete the options that are not relevant. In order to tick the check box 
 - [ ] I have updated the documentation accordingly.
 - [ ] All new and existing tests passed.
 - [ ] The title of my pull request is a short description of the requested changes.
-- [ ] I'm GSSOC'23 Contributor 
+Are you participating any open source program?
+
 <!--Add screen shots of the changed output-->
 
 ## Screenshots | GIF's (Recommended) 📷
