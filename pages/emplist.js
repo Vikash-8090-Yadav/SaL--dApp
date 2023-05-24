@@ -23,15 +23,15 @@ export default function Home({
     <div className = "HomeWrapper">
       <div className= "FilterWrapper" >
         <div className="Filteraction" style ={{fontSize:40}}/>
-        <div className='Category'  onClick={()=>setFilter(AllData)} ></div>
+        <div className='filterCategory'  onClick={()=>setFilter(AllData)} ><span></span></div>
       </div>
       <div className='Cardsswapper'>
       {filter.map((e)=>{
         console.log("image->",e.image);
         return (
           < div className='Card' key = {e.FirstName}>
-            <div className='CardImg'>
-              <Image layout ="fill" alt = "Sal-dApp"
+            <div className="CardImg">
+              <Image  layout ="fill" alt = "Sal-dApp"
               src = {"https://sal-dapp.infura-ipfs.io/ipfs/" + e.image}
               />
             </div>

@@ -92,69 +92,69 @@ export default function Home({
   };
   return (
     <div>
-      <div className="HomeWrapper">
-        <div className="FilterWrapper">
+      <div className="HomeWrapperemps">
+        <div className="FilterWrapperemps">
           <button className="Filteraction" style={{ fontSize: 40 }} />
           <button
-            className="filterCategory"
+            className="filterCategoryemps"
             onClick={() => setFilter(internData)}
           >
-            <span class="text">Intern</span>
+            <span class="textemps">Intern</span>
           </button>
-          <button className="filterCategory" onClick={() => setFilter(HRData)}>
-            <span class="text">H.R</span>
+          <button className="filterCategoryemps" onClick={() => setFilter(HRData)}>
+            <span class="textemps">H.R</span>
           </button>
-          <button className="filterCategory" onClick={() => setFilter(WebData)}>
-            <span class="text">WebDev</span>
+          <button className="filterCategoryemps" onClick={() => setFilter(WebData)}>
+            <span class="textemps">WebDev</span>
           </button>
-          <button className="filterCategory" onClick={() => setFilter(SDEData)}>
-            <span class="text">S.D.E</span>
+          <button className="filterCategoryemps" onClick={() => setFilter(SDEData)}>
+            <span class="textemps">S.D.E</span>
           </button>
         </div>
-        <div className="Cardsswapper">
+        <div className="Cardsswapperemps">
           {filter.map((e) => {
             console.log("image->", e.image);
             return (
-              <div className="Card" key={e.FirstName}>
+              <div className="Cardemps" key={e.FirstName}>
                 <div>
                   <Image
-                    className="CardImg"
+                    className="CardImgemps"
                     width={250}
                     height={180}
                     alt="sal-dApp "
                     src={"https://sal-dapp.infura-ipfs.io/ipfs/" + e.image}
                   />
                 </div>
-                <div className="Title">
+                <div className="Titleemps">
                   {e.FirstName} {e.LastName}
                 </div>
-                <div className="CardData">
-                  <div className="Text">
+                <div className="CardDataemps">
+                  <div className="Textemps">
                     Owner
                     <AccountBoxIcon />
                   </div>
-                  <div className="Text">
+                  <div className="Textemps">
                     {e.owner.slice(0, 6)}...{e.owner.slice(39)}
                   </div>
                 </div>
-                <div className="CardData">
-                  <div className="Text">
+                <div className="CardDataemps">
+                  <div className="Textemps">
                     Amount
                     <AccountBoxIcon />
                   </div>
-                  <div className="Text">100 MATIC</div>
+                  <div className="Textemps">100 MATIC</div>
                 </div>
-                <div className="CardData">
-                  <div className="Text">
+                <div className="CardDataemps">
+                  <div className="Textemps">
                     <EventIcon />
                   </div>
-                  <div className="Text">
+                  <div className="Textemps">
                     {new Date(e.timestamp * 1000).toLocaleString()}
                   </div>
                 </div>
-                <div className="btn">
+                <div className="btnemps">
                   <button
-                    className="pay-button"
+                    className="pay-buttonemps"
                     onClick={() => setIsModalOpen(true)}
                   >
                     <span>
