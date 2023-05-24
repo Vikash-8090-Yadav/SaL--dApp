@@ -43,7 +43,7 @@ contract Sal{
     string public Country;
     string public image;
 
-    uint public receivedDon;
+    uint public receivedDont;
     address payable public owner;
 
 
@@ -74,7 +74,7 @@ contract Sal{
         bool transactionStatus = owner.send(msg.value);
         require(transactionStatus,"Failed To Transfer Amount!");
 
-        receivedDon +=msg.value;
+        receivedDont +=msg.value;
 
         emit donated(msg.sender , msg.value ,block.timestamp);
     }
