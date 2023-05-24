@@ -1,79 +1,92 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >0.7.0 <=0.9.0;
 
+contract allemp {
+    address[] public deployedSals;
 
-
-contract allemp{
-
-    address [] public deployedSal;
-
-    event salcreated(
-        string FirstName,
-        string LastName,
+    event salCreated(
+        string firstName,
+        string lastName,
         address indexed owner,
         address salAddress,
         string image,
         uint indexed timestamp,
-        string indexed Position
+        string indexed position
     );
 
-    function addemp (
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Country,
+    function addemp(
+        string memory _firstName,
+        string memory _lastName,
+        string memory _walletAddress,
+        string memory _country,
         string memory _image,
-        string memory _Position)
-        public {
-        Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
+        string memory _position
+    ) public {
+        Sal newSal = new Sal(
+            _firstName,
+            _lastName,
+            _walletAddress,
+            _position,
+            _country,
+            _image
         );
-        deployedSal.push(address(newSal));
+        deployedSals.push(address(newSal));
 
-        emit salcreated(_FirstName,_LastName,msg.sender,address(newSal),_image, block.timestamp,_Position);
+        emit salCreated(
+            _firstName,
+            _lastName,
+            msg.sender,
+            address(newSal),
+            _image,
+            block.timestamp,
+            _position
+        );
     }
 }
 
+contract Sal {
+    struct Person {
+        string firstName;
+        string lastName;
+        string walletAddress;
+        string position;
+        string country;
+        string image;
+    }
+    Person public person;
 
-contract Sal{
-    string public FirstName;
-    string public LastName;
-    string public wallet_address;
-    string public Position;
-    string public Country;
-    string public image;
-
-    uint public recievedamnt;
+    uint public receivedAmount;
     address payable public owner;
 
-
-    event donated(address indexed donar , uint indexed amount , uint indexed timestamp);
+    event donated(
+        address indexed donar,
+        uint indexed amount,
+        uint indexed timestamp
+    );
 
     constructor(
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Position,
-        string memory _Country,
+        string memory _firstName,
+        string memory _lastName,
+        string memory _walletAddress,
+        string memory _position,
+        string memory _country,
         string memory _image
-    )
-    {
-        FirstName = _FirstName;
-        LastName = _LastName;
-        wallet_address = _wallet_ddress;
-        Position =_Position;
-        Country =_Country;
-        image = _image;
+    ) {
+        person = Person(
+            _firstName,
+            _lastName,
+            _walletAddress,
+            _position,
+            _country,
+            _image
+        );
         owner = payable(msg.sender);
-
-
     }
 
-    function donate () public payable {
+    function donate() public payable {
         owner.transfer(msg.value);
-        recievedamnt+=msg.value;
+        receivedAmount += msg.value;
 
-        emit donated(msg.sender , msg.value ,block.timestamp);
+        emit donated(msg.sender, msg.value, block.timestamp);
     }
-
 }
