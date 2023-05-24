@@ -70,7 +70,10 @@ contract Sal{
     }
 
     function donate () public payable {
-        owner.transfer(msg.value);
+        
+        bool transactionStatus = owner.send(msg.value);
+        require(transactionStatus,"Failed To Transfer Amount!");
+
         recievedamnt+=msg.value;
 
         emit donated(msg.sender , msg.value ,block.timestamp);
