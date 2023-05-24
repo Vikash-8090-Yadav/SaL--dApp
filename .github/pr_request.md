@@ -29,6 +29,6 @@ Are you participating any open source program?
 
 <!--Add screen shots of the changed output-->
 
-## Screenshots | GIF's (Recommended) 📷
+## Screenshots | Video (Recommended) 📷
 
 Add all the screenshots which support your changes
