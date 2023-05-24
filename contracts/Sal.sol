@@ -20,13 +20,13 @@ contract allemp{
     function addemp (
         string memory _FirstName,
         string memory _LastName,
-        string memory _wallet_ddress,
+        string memory _wallet_address,
         string memory _Country,
         string memory _image,
         string memory _Position)
         public {
         Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
+            _FirstName,_LastName,_wallet_address,_Position,_Country,_image
         );
         deployedSal.push(address(newSal));
 
@@ -43,7 +43,7 @@ contract Sal{
     string public Country;
     string public image;
 
-    uint public recievedamnt;
+    uint public receivedDon;
     address payable public owner;
 
 
@@ -52,7 +52,7 @@ contract Sal{
     constructor(
         string memory _FirstName,
         string memory _LastName,
-        string memory _wallet_ddress,
+        string memory _wallet_address,
         string memory _Position,
         string memory _Country,
         string memory _image
@@ -60,7 +60,7 @@ contract Sal{
     {
         FirstName = _FirstName;
         LastName = _LastName;
-        wallet_address = _wallet_ddress;
+        wallet_address = _wallet_address;
         Position =_Position;
         Country =_Country;
         image = _image;
@@ -74,7 +74,7 @@ contract Sal{
         bool transactionStatus = owner.send(msg.value);
         require(transactionStatus,"Failed To Transfer Amount!");
 
-        recievedamnt+=msg.value;
+        receivedDon +=msg.value;
 
         emit donated(msg.sender , msg.value ,block.timestamp);
     }
