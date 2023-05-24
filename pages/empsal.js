@@ -99,16 +99,16 @@ export default function Home({
             className="filterCategoryemps"
             onClick={() => setFilter(internData)}
           >
-            <span class="textemps">Intern</span>
+            <span className="textemps">Intern</span>
           </button>
           <button className="filterCategoryemps" onClick={() => setFilter(HRData)}>
-            <span class="textemps">H.R</span>
+            <span className="textemps">H.R</span>
           </button>
           <button className="filterCategoryemps" onClick={() => setFilter(WebData)}>
-            <span class="textemps">WebDev</span>
+            <span className="textemps">WebDev</span>
           </button>
           <button className="filterCategoryemps" onClick={() => setFilter(SDEData)}>
-            <span class="textemps">S.D.E</span>
+            <span className="textemps">S.D.E</span>
           </button>
         </div>
         <div className="Cardsswapperemps">
