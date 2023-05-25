@@ -7,7 +7,8 @@
 </h1>
 <p> <b>This Dapp allows an organization's admin to manage employee salaries by adding them as users and storing their info in IPFS /Filecoin  and making payments in Matic , Ethereum.</b> </p>
 <br>
-
+<div id="top">
+  
 ## How to Run Locally
 
 To run the Sal-dApp locally, follow these steps:
@@ -29,6 +30,8 @@ npm run dev
 ```
 5. Access the dApp:
 Open your web browser and visit http://localhost:3000 to interact with the SaL application.
+  
+<a href="#top">Back to Top</a>
 
 
 <div align="center">
@@ -46,7 +49,6 @@ Open your web browser and visit http://localhost:3000 to interact with the SaL a
   <img src="https://img.shields.io/github/commit-activity/y/Fenrir-04/Algo-Media?style=for-the-badge" />
   
 </div>
-
 
 
 ## 📋 Table of Contents
@@ -70,7 +72,8 @@ Open your web browser and visit http://localhost:3000 to interact with the SaL a
 - [Video Demo](#-video-demo)
 - [Contributing](#-contributing)
 
-
+</div>
+<a href="#top">Back to top</a>
 
 
  
@@ -125,6 +128,8 @@ Efforts were made to minimize gas costs by simplifying the Solidity code and opt
 
 <br>
 
+<a href = "#top">Back to top</a>
+
 ## 🏁 How Our Project Aligns with the Following Hackathon Tracks 
 
 
@@ -146,6 +151,7 @@ We are thrilled to be participating in the hackathon under the Ethereum track wi
 We are thrilled to be participating in the hackathon under the Repl.it track and utilizing the power of this free, open-source platform to seamlessly integrate the latest languages and technologies such as Node.js, JavaScript, MERN, Next.js, and React.js into our project. We have chosen to build our project using Next.js (Node.js) and have written all of our smart contract code in Solidity and JSX on Repl.it. While we faced some challenges, such as issues with replit.nix file integration and determining the proper entry point for our project, we were able to overcome these obstacles through utilizing the extensive documentation available on Repl.it. We are proud to announce that we have successfully deployed our project on Repl.it.
 
 <br>
+<a href="#top">Back to top</a>
 
 ## 🛠️Technologies we used
 | Technology | Description | URL |
@@ -164,8 +170,6 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 
 ## 🎥 Video Demo
 https://youtu.be/74lFjQw34pI
-
-
 
 ## 🤝 Contributing
 
@@ -192,6 +196,8 @@ Open a pull request.
 We appreciate your contributions and thank you for helping us improve Algo-Media!
 
 <br >
+</div>
+<a href="#top">Back to top</a>
 
 ## Project Contributors
 
@@ -219,3 +225,5 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 <p align = "center">
 Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> to this repo
 </p>
+</div>
+<a href="#top">Back to top</a>
