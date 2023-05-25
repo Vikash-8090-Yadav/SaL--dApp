@@ -9,6 +9,7 @@
 <br>
 <div id="top">
   
+  
 ## How to Run Locally
 
 To run the Sal-dApp locally, follow these steps:
