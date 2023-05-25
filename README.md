@@ -2,6 +2,7 @@
 
 <h1 align="center"> 
 
+  
   <img src="https://user-images.githubusercontent.com/85225156/215914335-d9a35b88-99ae-4769-8b1d-3b7e8ca3f993.png" width="35" height="30">
   <span style="color: yellow">Sal-dApp</span>
 </h1>
