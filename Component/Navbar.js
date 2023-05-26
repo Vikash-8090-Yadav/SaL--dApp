@@ -14,6 +14,7 @@ const Navbar = ({ handleLogout }) => {
   const links = [
     {
       id: 1,
+
       link: "Home",
       child: (
         <>
@@ -24,7 +25,7 @@ const Navbar = ({ handleLogout }) => {
     },
     {
       id: 2,
-      link: "cards",
+      link: "Text",
       child: (
         <>
           <FaDatabase size={25} />
@@ -32,6 +33,7 @@ const Navbar = ({ handleLogout }) => {
       ),
       name: "Data",
     },
+    
     {
       id: 3,
       link: "About",
@@ -42,6 +44,7 @@ const Navbar = ({ handleLogout }) => {
       ),
       name: "About",
     },
+   
     {
       id: 4,
       link: "contact",
@@ -51,7 +54,7 @@ const Navbar = ({ handleLogout }) => {
         </>
       ),
       name: "Support Me"
-    },
+    }
   ]
 
   return (
