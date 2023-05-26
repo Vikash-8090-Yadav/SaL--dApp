@@ -11,7 +11,7 @@ import Image from "next/image"
 
 const Navbar = ({ handleLogout }) => {
   const [nav, setNav] = useState(false);
-  const links = [
+  const link1 = [
     {
       id: 1,
       link: "Home",
@@ -21,7 +21,10 @@ const Navbar = ({ handleLogout }) => {
         </>
       ),
       name: "Home",
-    },
+    }
+  ]
+  const links = [
+    
     {
       id: 2,
       link: "cards",
@@ -65,7 +68,17 @@ const Navbar = ({ handleLogout }) => {
         </div>
 
         <ul className="hidden center pl-6 md:flex text-blue-500">
+        {link1.map(({ id, link, name }) => (
+            
+            <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
+              {link === 'Logout' ?
+                <a className="hidden" onClick={handleLogout}>{link}</a> :
+                <a href="/">{name}</a>
+              }
+            </li>
+          ))}
           {links.map(({ id, link, name }) => (
+            
             <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
               {link === 'Logout' ?
                 <a className="hidden" onClick={handleLogout}>{link}</a> :
