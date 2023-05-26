@@ -42,7 +42,7 @@ const Navbar = ({ handleLogout }) => {
           <FaDatabase size={25} />
         </>
       ),
-      name: "Reviews",
+      name: "Data",
     },
     {
       id: 4,
