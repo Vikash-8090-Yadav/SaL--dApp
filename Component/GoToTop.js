@@ -43,9 +43,9 @@ const Wrapper = styled.section`
   position: relative;
 
   .top-btn {
-    font-size: 1rem;
-    width: 2rem;
-    height: 2rem;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: #fff;
     background-color:#494F55;
     box-shadow:rgba(0,0,0,0.2) 0px 0px 10px 0px;
@@ -60,15 +60,15 @@ const Wrapper = styled.section`
     cursor: pointer;
 
     &--icon {
-      animation: gototop 1.2s linear infinite alternate-reverse;
+      animation: gototop 1s linear infinite alternate-reverse;
     }
 
     @keyframes gototop {
       0% {
-        transform: translateY(-0.5rem);
+        transform: translateY(-0.3rem);
       }
       100% {
-        transform: translateY(1rem);
+        transform: translateY(0.8rem);
       }
     }
   }
