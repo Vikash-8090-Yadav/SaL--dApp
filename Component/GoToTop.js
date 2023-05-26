@@ -43,16 +43,16 @@ const Wrapper = styled.section`
   position: relative;
 
   .top-btn {
-    font-size: 2.4rem;
-    width: 4rem;
-    height: 4rem;
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
     color: #fff;
-    background-color:black;
+    background-color:#494F55;
     box-shadow:rgba(0,0,0,0.2) 0px 0px 10px 0px;
     border-radius: 50%;
     position: fixed;
-    bottom: 3rem;
-    left: 2rem;
+    bottom: 2rem;
+    left: 1rem;
     z-index: 999;
     display: flex;
     justify-content: center;
