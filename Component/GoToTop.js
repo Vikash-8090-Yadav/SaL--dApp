@@ -43,9 +43,9 @@ const Wrapper = styled.section`
   position: relative;
 
   .top-btn {
-    font-size: 1.8rem;
-    width: 3rem;
-    height: 3rem;
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
     color: #fff;
     background-color:#494F55;
     box-shadow:rgba(0,0,0,0.2) 0px 0px 10px 0px;
