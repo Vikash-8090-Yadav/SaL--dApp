@@ -23,6 +23,16 @@ const Navbar = ({ handleLogout }) => {
       ),
       name: "Home",
     },
+    {
+      id: 2,
+      link: "Text",
+      child: (
+        <>
+          <FaDatabase size={25} />
+        </>
+      ),
+      name: "Data",
+    },
     
     {
       id: 3,
@@ -34,16 +44,7 @@ const Navbar = ({ handleLogout }) => {
       ),
       name: "About",
     },
-    {
-      id: 2,
-      link: "Data",
-      child: (
-        <>
-          <FaDatabase size={25} />
-        </>
-      ),
-      name: "Data",
-    },
+   
     {
       id: 4,
       link: "contact",
