@@ -300,18 +300,80 @@ ul li{
   width: 100%;
   z-index: 1;
 }
-.Cardsswapper{
-  max-height: 600px;
-  overflow: auto;
-  margin-left: 192px;
-  padding-left: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 110vh;
-  margin-top: 25px;
+
+@media only screen and (min-width: 1000px) and (max-width:1299px){
+
+  .Cardsswapper{
+    max-height: 600px;
+    overflow: auto;
+    margin-left: 152px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 72vh;
+  
+    margin-top: 25px;
+  }
+  
 }
+
+@media only screen and (min-width: 1300px){
+
+  .Cardsswapper{
+    max-height: 600px;
+    overflow: auto;
+    margin-left: 112px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 110vh;
+  
+    margin-top: 25px;
+  }
+  
+}
+
+
+@media only screen and (min-width: 500px) and (max-width :999px ){
+
+  .Cardsswapper{
+    max-height: 600px;
+    overflow: auto;
+    margin-left: 52px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 43vh;
+    margin-top: 25px;
+  }
+  
+}
+
+
+@media only screen and (min-width: 100px)  and (max-width: 499px){
+
+  .Cardsswapper{
+    max-height: 600px;
+    overflow: auto;
+    margin-left: 52px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 37vh;
+  
+    margin-top: 25px;
+  }
+  
+}
+
 /* .bind-home-card{
   height: 100vh;
   overflow: scroll;
