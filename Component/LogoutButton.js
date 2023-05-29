@@ -7,10 +7,10 @@ const LogoutButton = ({ handleLogout }) => {
     return (
       <>
       <div>
-        <button className = "py-1.5 px-2 m-2 rounded-lg flex text-white bg-red-500 font-bold my-btn" 
+        <button className = "py-1.5 px-2 m-2 rounded-md flex text-white bg-red-500 font-bold my-btn" 
         onClick={handleLogout} 
         >
-            <div className = "text-md">LOGOUT</div> 
+            <div className = "text-x">Logout</div> 
             <LogoutIcon size = {25} className = "ml-2" />
         </button>
         </div>
