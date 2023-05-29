@@ -1,7 +1,6 @@
-<img src="https://user-images.githubusercontent.com/85225156/215915297-5e1222b1-0ea6-43e3-ae87-e95530726132.png" width="885" height="430">
+<img src="https://github.com/Vikash-8090-Yadav/SaL--dApp/assets/95125149/f6691a76-c806-4b65-9ee3-e20d6e75dd40">
 
 <h1 align="center"> 
-
   <img src="https://user-images.githubusercontent.com/85225156/215914335-d9a35b88-99ae-4769-8b1d-3b7e8ca3f993.png" width="35" height="30">
   <span style="color: yellow">Sal-dApp</span>
 </h1>
