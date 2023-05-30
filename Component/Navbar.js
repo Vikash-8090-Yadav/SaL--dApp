@@ -73,7 +73,7 @@ const Navbar = ({ handleLogout }) => {
         <ul className="hidden center pl-6 md:flex text-blue-500">
         {link1.map(({ id, link, name }) => (
             
-            <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
+            <li key={id} className="px-4 py-4  cursor-pointer md:hover:text-white duration-300 text-xl font-semibold">
               {link === 'Logout' ?
                 <a className="hidden" onClick={handleLogout}>{link}</a> :
                 <a href="/">{name}</a>
@@ -81,7 +81,7 @@ const Navbar = ({ handleLogout }) => {
             </li>
           ))}
           {links.map(({ id, link, name }) => (
-            <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
+            <li key={id} className="px-4 py-4  cursor-pointer md:hover:text-white duration-300 text-xl font-semibold">
               {link === 'Logout' ?
                 <a className="hidden" onClick={handleLogout}>{link}</a> :
                 <Link to={link} smooth duration={50}>{name}</Link>

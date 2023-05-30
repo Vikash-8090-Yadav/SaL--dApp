@@ -20,13 +20,13 @@ const Card = (data) => {
 						/>
 						<div className="flex flex-col gap-3 p-3">
 							<div>
-								<h2 className="font-bold text-center">
+								<h2 className="font-bold text-center text-lg">
 									{data.name}
 								</h2>
 							</div>
 
 							<div>
-								<p className="text-center line-clamp-5">
+								<p className="text-center text-justify line-clamp-6">
 									{data.feedback}
 								</p>
 							</div>
