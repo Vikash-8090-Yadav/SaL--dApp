@@ -12,7 +12,7 @@ task("accounts","Prints the list of the accounts",async (taskArgs , hre )=>{
 module.exports = {
   solidity: "0.8.10",
 
-  defaultNetwork: "polygon",
+  defaultNetwork: "hardhat",
   networks:{
     hardhat:{},
     polygon :{
