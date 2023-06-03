@@ -63,17 +63,17 @@ const Navbar = ({ handleLogout }) => {
   return (
     <>
       <div className='navbar w-screen  bg-gradient-to-b from-gray-900 to-black flex justify-between items-center  overflow-hidden h-14 py-2 px-1 text-slate-300 fixed z-50'>
-        <div className="flex">
-          <div className="w-10 h-10 px-2 py-2 pt-2 cursor-pointer">
+        <div className="flex cursor-pointer">
+          <div className="w-10 h-10 px-2 py-2 pt-2">
             <Image className="rounded-full" src={SalDappLogo} height="32" width="30" alt="" />
           </div>
-          <h1 className="text-2xl font-bold text-blue-500 ml-2 max-md:text-base max-sm:ml-1 max-md:mr-3 cursor-default font-title max-md:pt-2 pt-1">DAPP.eth</h1>
+          <h1 className="text-2xl font-bold text-blue-500 ml-2 max-md:text-base max-sm:ml-1 max-md:mr-3 cursor-default font-title max-md:pt-2 pt-1 hover:text-white hover:cursor-pointer">DAPP.eth</h1>
         </div>
 
         <ul className="hidden center pl-6 md:flex text-blue-500">
         {link1.map(({ id, link, name }) => (
             
-            <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
+            <li key={id} className="px-4 py-4  cursor-pointer md:hover:text-white duration-300 text-xl font-semibold">
               {link === 'Logout' ?
                 <a className="hidden" onClick={handleLogout}>{link}</a> :
                 <a href="/">{name}</a>
@@ -81,8 +81,7 @@ const Navbar = ({ handleLogout }) => {
             </li>
           ))}
           {links.map(({ id, link, name }) => (
-            
-            <li key={id} className="px-4 py-4  cursor-pointer md:hover:scale-125 duration-300 text-xl font-semibold">
+            <li key={id} className="px-4 py-4  cursor-pointer md:hover:text-white duration-300 text-xl font-semibold">
               {link === 'Logout' ?
                 <a className="hidden" onClick={handleLogout}>{link}</a> :
                 <Link to={link} smooth duration={50}>{name}</Link>
@@ -102,10 +101,10 @@ const Navbar = ({ handleLogout }) => {
         </ul>
 
         <div className="flex">
-          <button className="pl-2 py-4 text-l font-small">
+          <button className="pl-2 py-4 text-l font-xs">
             <Web3Button balance="show" icon="hide" label="Connect Wallet" />
           </button>
-          <button className="pl-4 py-4 text-l font-small">
+          <button className="pl-4 py-4 px-4 text-l font-small">
             <LogoutButton handleLogout={handleLogout} />
           </button>
 

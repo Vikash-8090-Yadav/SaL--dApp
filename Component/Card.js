@@ -8,25 +8,25 @@ const Card = (data) => {
 
 	return (
 		<>
-			<div className="bg-blue-500 p-4 rounded-lg">
-				<div className="w-100 bg-white shadow-xl rounded-lg">
+			<div className="rounded-xl">
+				<div className="w-100 bg-white shadow-xl rounded-xl">
 					<div>
 						<Image
-							className="h-32 w-full object-cover rounded-t-lg"
+							className="h-32 w-full object-cover rounded-lg"
 							src={data.img.src}
 							alt="Profile"
 							height={400}
 							width={500}
 						/>
-						<div className="flex flex-col gap-4 p-4">
+						<div className="flex flex-col gap-3 p-3">
 							<div>
-								<h2 className="font-bold text-center">
+								<h2 className="font-bold text-center text-lg">
 									{data.name}
 								</h2>
 							</div>
 
 							<div>
-								<p className="text-center line-clamp-5">
+								<p className="text-center text-justify line-clamp-6">
 									{data.feedback}
 								</p>
 							</div>
@@ -34,10 +34,10 @@ const Card = (data) => {
 							<div className="flex flex-row justify-center content-center">
 								<div className="justify-center">
 									<button
-										className="bg-blue-500 p-2 rounded-lg text-white hover:bg-blue-800 text-center"
+										className="bg-blue-400 p-2 rounded-md text-white hover:bg-blue-600 text-center"
 										href="#"
 									>
-										Read More...
+										Read More
 									</button>
 								</div>
 							</div>
