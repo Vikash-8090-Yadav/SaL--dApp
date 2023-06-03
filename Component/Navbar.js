@@ -105,7 +105,7 @@ const Navbar = ({ handleLogout }) => {
           <button className="pl-2 py-4 text-l font-small">
             <Web3Button balance="show" icon="hide" label="Connect Wallet" />
           </button>
-          <button className="p-4 py-4 text-l font-small">
+          <button className="p1-4 py-4 text-l font-small">
             <LogoutButton handleLogout={handleLogout} />
           </button>
 
