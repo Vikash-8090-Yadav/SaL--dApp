@@ -47,6 +47,7 @@ Open your web browser and visit http://localhost:3000 to interact with the SaL a
   <img src="https://img.shields.io/github/last-commit/Fenrir-04/Algo-Media?style=for-the-badge" />
   <img src="https://img.shields.io/github/commit-activity/y/Fenrir-04/Algo-Media?style=for-the-badge" />
   
+  
 </div>
 
 
@@ -153,6 +154,15 @@ We are thrilled to be participating in the hackathon under the Repl.it track and
 <a href="#top">Back to top</a>
 
 ## 🛠️Technologies we used
+
+[![Next.js](https://img.shields.io/badge/Built_with-Next.js-000000?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Styled_with-Tailwind_CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Hardhat](https://img.shields.io/badge/Built_with-Hardhat-blue.svg)](https://hardhat.org/)
+[![ethers.js](https://img.shields.io/badge/Powered_by-ethers.js-3C3C3D?logo=ethereum)](https://docs.ethers.io/)
+[![Polygon](https://img.shields.io/badge/Built_for-Polygon-8247E5?logo=polygon)](https://polygon.technology/)
+[![IPFS](https://img.shields.io/badge/Powered_by-IPFS-65C2CB?logo=ipfs)](https://ipfs.io/)
+[![Powered by Ethereum](https://img.shields.io/badge/Powered_by-Ethereum-3C3C3D?logo=ethereum)](https://ethereum.org/)
+
 | Technology | Description | URL |
 |----------|----------|----------|
 | Next Js | JavaScript framework for building server-rendered or statically-generated applications | https://nextjs.org/ |
