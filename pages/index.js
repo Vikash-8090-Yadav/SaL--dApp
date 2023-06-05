@@ -1,171 +1,178 @@
-import styled from 'styled-components';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import PaidIcon from '@mui/icons-material/Paid';
-import EventIcon from '@mui/icons-material/Event';
-import Image from 'next/image';
-import { ethers } from 'ethers';
-import { useState } from 'react';
-import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai'
-import Link from 'next/link'
-import { Button } from '@mui/material';
-import allemp from "../artifacts/contracts/Sal.sol/allemp.json"
+import Layout from "../Component/Layout";
+import Navbar from "../Component/Navbar";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { useRouter } from "next/router";
 
-export default function Home({
-  AllData,
-  internData,
-  HRData,
-  SDEData,
-  WebData
-}) {
-  const [filter, setFilter] = useState(AllData);
-  const [expand, setExpand] = useState(false);
+import { Web3Modal } from "@web3modal/react";
+
+import { ethereumClient } from "./_app";
+
+import { useEffect, useState } from "react";
+import { ColorRing } from "react-loader-spinner";
+import useArcanaAuth from "./useArcanaAuth";
+
+function MyApp({ Component, pageProps = {} }) {
+  const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState("");
+  const [account, setAccount] = useState("");
+
+  const projectId = "2437b6ee508a24481ec9cfa2ff6ddadf";
+
+  const {
+    initializeAuth,
+    loggedIn,
+    getAccounts,
+    login,
+    loginWithLink,
+    logout,
+    initialized,
+  } = useArcanaAuth();
+
+  const initialize = async () => {
+    await initializeAuth();
+  };
+
+  const handleLogout = async () => {
+    await logout();
+  };
+
+  useEffect(() => {
+    initialize();
+  }, []);
+
+  useEffect(() => {
+    const loadDetails = async () => {
+      if (initialized) {
+        if (loggedIn) {
+          const acc = await getAccounts();
+          setAccount(acc[0]);
+          setLoading(false);
+        } else {
+          setLoading(false);
+        }
+      }
+    };
+    loadDetails();
+  }, [initialized, loggedIn]);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const { pathname } = useRouter();
+
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
   return (
     <>
-      <div className="h-screen bg-gradient-to-b from-gray-900 to-black overflow-scroll flex flex-col">
-        <div className="w-44 font-medium h-80 absolute right-12 max-sm:w-36 text-center z-20">
-          <button onClick={() => setExpand((prev) => !prev)} className="bg-blue-500 w-full py-2 px-2 mt-2 flex items-center justify-around rounded   text-white font-bold">
-            Select Profile
-            {!expand ? (
-              <AiFillCaretDown size={20} />
-            ) : (
-              <AiFillCaretUp size={20} />
-            )}
-          </button>
-
-          {expand && (
-            <div className="bg-blue-500">
-              {
-                <ul className="bg-blue-500">
-                  <li className="p-2 mt-2 text-l hover:bg-black cursor-pointer text-white" onClick={() => setFilter(internData)}>Intern</li>
-                  <li className="p-2 text-l hover:bg-black cursor-pointer text-white" onClick={() => setFilter(HRData)}>HR</li>
-                  <li className="p-2 text-l hover:bg-black cursor-pointer text-white" onClick={() => setFilter(WebData)}>Web Developer</li>
-                  <li className="p-2 text-l hover:bg-black cursor-pointer text-white" onClick={() => setFilter(SDEData)}>SDE</li>
-                </ul>
-              }
+      <div>
+        <div>
+          {loading ? (
+            <div className="w-screen h-screen flex flex-col justify-center items-center">
+              <ColorRing height={90} />
+              <div className="font-semibold text-4xl tracking-widest px-5 text-center">
+                WELCOME TO SAL DAPP
+              </div>
             </div>
-          )}
-        </div>
+          ) : !loading && loggedIn ? (
+            <div>
+              {ready ? (
+                <div>
+                  <div className="big bg-indigo-800"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mt-12">
-          {filter?.map((e) => {
-            return (
-              <div className='Card' key={e.FirstName}>
-                <div className='p-3 border-spacing-1 border-2 bg-blue-100 bg-gradient-to-r max-w-sm rounded overflow-hidden shadow-lg'>
-                  <div className='CardImg'>
-                    <Image layout="fill" alt="sal-dApp" src={"https://sal-dapp.infura-ipfs.io/ipfs/" + e.image} />
-                  </div>
+                  <Navbar handleLogout={handleLogout} />
+                  <Layout />
 
-                  <div className=" text-center text-3xl font-sans Title">
-                    {e.FirstName}
-                    <div className='CardData font-bold mb-2 text-gray-700 text-base '>
-                      <div className="Text font-bold text-xl mb-2">Owner<AccountBoxIcon /></div>
-                      <div className="Text font-bold text-xl mb-2"> {e.owner.slice(0, 6)}...{e.owner.slice(39)}<AccountBoxIcon /></div>
-                    </div>
+                  {pathname === "/custom" ? null : (
+                    <Web3Modal
+                      projectId={projectId}
+                      ethereumClient={ethereumClient}
+                    />
+                  )}
+                </div>
+              ) : null}
+            </div>
+          ) : (
+            <div className="flex h-screen bg-blue-400">
+              <div className="m-auto bg-slate-50 shadow-2xl drop-shadow-2xl rounded-md w-3/5 h-3/4 grid lg:grid-cols-2">
+                <div className="max-lg:hidden relative overflow-hidden bg-gradient-to-b from-blue-500 to-gray-800 rounded-l-md">
+                  <div className={styles.cartoonImg}></div>
+                  <div className={styles.cloud_one}></div>
+                  <div className={styles.cloud_two}></div>
+                </div>
 
-                    <div className="CardData text-gray-700 text-base" >
-                      <div className="Text">Amount<AccountBoxIcon /></div>
-                      <div className="Text">100 MATIC<AccountBoxIcon /></div>
-                    </div>
+                {/* Right Side */}
 
-                    <div className="CardData text-gray-700 text-base">
-                      <div className="Text"><EventIcon /></div>
-                      <div className="Text">{new Date(e.timestamp * 1000).toLocaleString()}</div>
-                    </div>
+                <div className="right flex flex-col shadow-xl drop-shadow-xl justify-evenly ">
+                  <div className="text-center">
+                    <section className="w-3/4 h-3/4 mx-auto flex flex-col gap-10 max-sm:w-11/12">
+                      <div className="title">
+                        <h1 className="text-gray-800 text-4xl font-bold py-4">
+                          Sal dAPP
+                        </h1>
+                        <p className="w-3/4 mx-auto text-gray-500">
+                          {" "}
+                          --- Transparency in one click ---{" "}
+                        </p>
+                      </div>
+
+                      {/* form */}
+                      <form className="flex flex-col gap-5">
+                        <div className="border rounded-xl">
+                          <input
+                            value={email}
+                            type="email"
+                            placeholder="Email"
+                            onChange={handleEmailChange}
+                            className="w-full py-4 px-6 border rounded-xl bg-slate-50 focus:outline-none border-none"
+                          />
+                        </div>
+
+                        {/* login buttons */}
+                        <div className="input-button">
+                          <button
+                            onClick={() => loginWithLink(email)}
+                            className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md py-3 text-gray-50 text-lg font-bold hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:outline outline-offset-[-1.5px] hover:outline-blue-500 hover:text-gray-700"
+                          >
+                            Login
+                          </button>
+                        </div>
+
+                        <div className="input-button flex">
+                          <button
+                            onClick={() => login("google")}
+                            type="button"
+                            className="w-full py-3 flex justify-center gap-5"
+                          >
+                            <Image
+                              src={"/assets/google.svg"}
+                              width="37"
+                              height="37"
+                              alt="google-sign-in"
+                            />
+                            <Image
+                              src={"/assets/github.svg"}
+                              width="37"
+                              height="37"
+                              alt="github-sign-in"
+                            />
+                          </button>
+                        </div>
+                      </form>
+                    </section>
                   </div>
                 </div>
               </div>
-            )
-          })
-          }
+            </div>
+          )}
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export async function getStaticProps() {
-  const provider = new ethers.providers.JsonRpcProvider(
-    "https://polygon-mumbai.g.alchemy.com/v2/MeKFrDq5O-mlM8I0CzXpKg0pRvdNRjxF"
-  );
-
-  const contract = new ethers.Contract(
-    "0x7c73D7e12b5eA8809B1261cF7b8513F6E6E5d528",
-    allemp.abi,
-    provider
-  );
-
-  const getALlData = contract.filters.salcreated();
-  const All = await contract.queryFilter(getALlData);
-
-  console.log("a;llll->", All);
-
-  const AllData = All.map((e) => {
-    return {
-      FirstName: e.args.FirstName,
-      LastName: e.args.LastName,
-      owner: e.args.owner,
-      image: e.args.image,
-      timestamp: parseInt(e.args.timestamp)
-    }
-  });
-  const getInternData = contract.filters.salcreated(null, null, null, null, null, null, 'Intern');
-  const Intern = await contract.queryFilter(getInternData);
-
-  const internData = Intern.map((e) => {
-    return {
-      FirstName: e.args.FirstName,
-      LastName: e.args.LastName,
-      owner: e.args.owner,
-      image: e.args.image,
-      timestamp: parseInt(e.args.timestamp)
-    }
-  });
-
-  const getHRData = contract.filters.salcreated(null, null, null, null, null, null, 'H.R');
-  const HR = await contract.queryFilter(getHRData);
-
-  const HRData = HR.map((e) => {
-    return {
-      FirstName: e.args.FirstName,
-      LastName: e.args.LastName,
-      owner: e.args.owner,
-      image: e.args.image,
-      timestamp: parseInt(e.args.timestamp)
-    }
-  });
-  const getSDE2Data = contract.filters.salcreated(null, null, null, null, null, null, 'S.D.E-2');
-  console.log("sdxe", getSDE2Data);
-  const SDE2 = await contract.queryFilter(getSDE2Data);
-  console.log("sde2", SDE2);
-  const SDEData = SDE2.map((e) => {
-    return {
-      FirstName: e.args.FirstName,
-      LastName: e.args.LastName,
-      owner: e.args.owner,
-      image: e.args.image,
-      timestamp: parseInt(e.args.timestamp)
-    }
-  });
-  const getwebData = contract.filters.salcreated(null, null, null, null, null, null, 'Web Developer');
-  const Web = await contract.queryFilter(getwebData);
-
-  const WebData = Web.map((e) => {
-    return {
-      FirstName: e.args.FirstName,
-      LastName: e.args.LastName,
-      owner: e.args.owner,
-      image: e.args.image,
-      timestamp: parseInt(e.args.timestamp)
-    }
-  });
-  return {
-    props: {
-      AllData,
-      internData,
-      HRData,
-      SDEData,
-      WebData
-    }
-  }
-}
+export default MyApp;
