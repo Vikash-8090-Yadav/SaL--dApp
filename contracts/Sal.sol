@@ -6,7 +6,7 @@ pragma solidity >0.7.0 <=0.9.0;
 contract allemp{
 
     address [] public deployedSal;
-    mapping(string => bool) public isEmployeeRegistered; // New mapping to check duplicate employees
+    mapping(address => bool) public isEmployeeRegistered; // New mapping to check duplicate employees
 
     event salcreated(
         string FirstName,
@@ -21,7 +21,7 @@ contract allemp{
     function addemp (
         string memory _FirstName,
         string memory _LastName,
-        string memory _wallet_address,
+        address _wallet_address,
         string memory _Country,
         string memory _image,
         string memory _Position)
@@ -44,7 +44,7 @@ contract allemp{
 contract Sal{
     string public FirstName;
     string public LastName;
-    string public wallet_address;
+    address public wallet_address;
     string public Position;
     string public Country;
     string public image;
@@ -58,7 +58,7 @@ contract Sal{
     constructor(
         string memory _FirstName,
         string memory _LastName,
-        string memory _wallet_address,
+         address _wallet_address,
         string memory _Position,
         string memory _Country,
         string memory _image
