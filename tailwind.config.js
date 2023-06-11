@@ -5,7 +5,12 @@ module.exports = {
 		"./Component/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'lily-script-one': ['Lily Script One', 'sans-serif'],
+				'Inter': ['Inter','sans-serif'],
+			},
+		},
 	},
 
 	variants: {
