@@ -20,7 +20,7 @@ function Contact() {
 
 
         
-    <div className="sm:px-4 py-16  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="sm:px-4 py-16  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 m-auto">
       <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded-3xl shadow-sm lg:flex-row sm:mx-auto">
         <div className="relative lg:w-1/2">
         <Image src ={confused} width ={500} height = {400}  alt ="hero-image"/>
