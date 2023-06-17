@@ -14,13 +14,13 @@ import footerIcon from "../../images/footer-icon.png";
 function Footer() {
   return (
     <>
-      <div className="p-8">
+      <div className="p-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-4 justify-between max-md:flex-col max-md:text-center">
             <div className="mb-5">
-              <h4 className="font-lily-script-one text-[#000000] text-3xl font-bold text-center pb-1 pt-3">
+              <h4 className="mt-1 font-lily-script-one text-[#000000] text-3xl font-bold text-center pb-1 pt-3">
                 <div className="flex items-center justify-center">
-                  <div className="pr-2">
+                  <div className="pr-2 mt-2">
                     <Image src={footerIcon} height={52} width={24.69} alt="" />
                   </div>
                   <div className="pl-2">Sall Dapp</div>
@@ -82,7 +82,7 @@ function Footer() {
               </div>
             </div>
             <div className="mb-5 font-Inter">
-              <h4 className="text-3xl pb-3 font-bold text-[#202020] text-center">
+              <h4 className="text-3xl pb-2 mt-1 font-bold text-[#202020] text-center">
                 Meta
                 <span className="text-[#6F97FF]">.eth</span>
               </h4>
