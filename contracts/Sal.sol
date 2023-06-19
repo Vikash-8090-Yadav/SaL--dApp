@@ -1,79 +1,129 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >0.7.0 <=0.9.0;
 
+contract AllEmp {
+    struct Employee {
+        string firstName;
+        string lastName;
+        string walletAddress;
+        string country;
+        string image;
+        string position;
+    }
 
+    mapping(address => Employee) public employees;
+    address[] public deployedSal;
 
-contract allemp{
-
-    address [] public deployedSal;
-
-    event salcreated(
-        string FirstName,
-        string LastName,
+    event SalCreated(
+        string firstName,
+        string lastName,
         address indexed owner,
         address salAddress,
         string image,
-        uint indexed timestamp,
-        string indexed Position
+        uint256 timestamp,
+        string position
     );
 
-    function addemp (
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Country,
+    function addEmp(
+        string memory _firstName,
+        string memory _lastName,
+        string memory _walletAddress,
+        string memory _country,
         string memory _image,
-        string memory _Position)
-        public {
-        Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
+        string memory _position
+    ) public {
+        Employee memory newEmployee = Employee({
+            firstName: _firstName,
+            lastName: _lastName,
+            walletAddress: _walletAddress,
+            country: _country,
+            image: _image,
+            position: _position
+        });
+
+        employees[msg.sender] = newEmployee;
+
+        Sal newSal = new Sal(
+            _firstName,
+            _lastName,
+            _walletAddress,
+            _position,
+            _country,
+            _image,
+            msg.sender
         );
         deployedSal.push(address(newSal));
 
-        emit salcreated(_FirstName,_LastName,msg.sender,address(newSal),_image, block.timestamp,_Position);
+        emit SalCreated(
+            _firstName,
+            _lastName,
+            msg.sender,
+            address(newSal),
+            _image,
+            block.timestamp,
+            _position
+        );
     }
 }
 
-
-contract Sal{
-    string public FirstName;
-    string public LastName;
-    string public wallet_address;
-    string public Position;
-    string public Country;
+contract Sal {
+    string public firstName;
+    string public lastName;
+    string public walletAddress;
+    string public position;
+    string public country;
     string public image;
 
-    uint public recievedamnt;
+    uint256 public receivedAmount;
     address payable public owner;
 
+    event Donated(address indexed donor, uint256 amount, uint256 timestamp);
 
-    event donated(address indexed donar , uint indexed amount , uint indexed timestamp);
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the contract owner can call this function");
+        _;
+    }
 
     constructor(
-        string memory _FirstName,
-        string memory _LastName,
-        string memory _wallet_ddress,
-        string memory _Position,
-        string memory _Country,
-        string memory _image
-    )
-    {
-        FirstName = _FirstName;
-        LastName = _LastName;
-        wallet_address = _wallet_ddress;
-        Position =_Position;
-        Country =_Country;
+        string memory _firstName,
+        string memory _lastName,
+        string memory _walletAddress,
+        string memory _position,
+        string memory _country,
+        string memory _image,
+        address payable _owner
+    ) {
+        firstName = _firstName;
+        lastName = _lastName;
+        walletAddress = _walletAddress;
+        position = _position;
+        country = _country;
         image = _image;
-        owner = payable(msg.sender);
-
-
+        owner = _owner;
     }
 
-    function donate () public payable {
+    function donate() public payable {
+        require(msg.value > 0, "Donation amount must be greater than zero");
+
         owner.transfer(msg.value);
-        recievedamnt+=msg.value;
+        receivedAmount += msg.value;
 
-        emit donated(msg.sender , msg.value ,block.timestamp);
+        emit Donated(msg.sender, msg.value, block.timestamp);
     }
 
+    function updateDetails(
+        string memory _firstName,
+        string memory _lastName,
+        string memory _walletAddress,
+        string memory _position,
+        string memory _country,
+        string memory _image
+    ) public onlyOwner {
+        firstName = _firstName;
+        lastName = _lastName;
+        walletAddress = _walletAddress;
+        position = _position;
+        country = _country;
+        image = _image;
+    }
 }
