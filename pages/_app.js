@@ -153,9 +153,11 @@ function MyApp({ Component, pageProps = {} }) {
                         </div>
                 
                         <div className = "input-button flex">
-                          <button  onClick={() => login('google')} type='button' className = "w-full py-3 flex justify-center gap-5">
+                          <button onClick={() => login('google')} type='button' className = "w-full py-3 flex justify-center gap-5">
                             <Image src={'/assets/google.svg'} width = "37" height = "37" alt="google-sign-in" />
-                            <Image src={'/assets/github.svg'} width = "37" height = "37" alt="github-sign-in" />
+                          </button>
+                          <button onClick={() => login('github')} type='button' className = "w-full py-3 flex justify-center gap-5">
+                          <Image src={'/assets/github.svg'} width = "37" height = "37" alt="github-sign-in" />
                           </button>
                         </div>
                       </form>
