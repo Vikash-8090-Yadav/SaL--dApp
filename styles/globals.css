@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -26,7 +26,7 @@ a {
   box-sizing: border-box;
 }
 
-ul li{
+ul li {
   list-style: none;
 }
 
@@ -50,12 +50,13 @@ ul li{
   /* left: -100%; */
   flex-shrink: 0;
   transition: 850ms;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  ;
 }
 
 @media(max-width:992px) {
   .nav-menu {
-    width:40px;
+    width: 40px;
   }
 }
 
@@ -75,12 +76,12 @@ ul li{
 /* Added the  styles for the main component */
 
 
-.mn-cnt{
+.mn-cnt {
   display: flex;
   width: 80%;
 }
 
-.container{
+.container {
   width: 100vw;
   min-height: 0px;
   display: flex;
@@ -91,7 +92,7 @@ ul li{
   /* background-color: blue; */
 }
 
-.left-sidebar{
+.left-sidebar {
   /* background-color: #cbdffa; */
   flex-basis: 15%;
   position: sticky;
@@ -104,21 +105,21 @@ ul li{
   height: 90vh;
   justify-content: space-between;
   /* width: 50vh; */
-  /* flex-basis: 85%; */
+/* flex-basis: 85%; */
 /* }  */
 
-.right-sidebar{
+.right-sidebar {
   background: #fff;
   flex-basis: 15%;
   position: sticky;
-  top:70px;
+  top: 70px;
   align-self: flex-start;
   padding: 20px;
   border-radius: 4px;
   color: #626262;
 }
 
-.imp-link a{
+.imp-link a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -127,65 +128,68 @@ ul li{
   width: fit-content;
 }
 
-.imp-link a img{
+.imp-link a img {
   width: 25px;
   margin-right: 15px;
 }
 
-.imp-link{
+.imp-link {
   border-bottom: 1px solid #ccc;
 }
 
-.wallletwrapper{
+.wallletwrapper {
   display: flex;
-  color:white;
+  color: white;
   align-items: center;
   height: 100%;
   padding: 15px 15px;
   border-radius: 10px;
   margin-right: 28px;
   margin-top: 1px;
-  font:bold;
+  font: bold;
   font-size: small;
 }
 
-.lg{
+.lg {
   display: flex;
   margin-top: 21px;
   margin-left: 32px;
 }
-.wl{
-  font-size:20px;
+
+.wl {
+  font-size: 20px;
   font-weight: bold;
   height: 100%;
-  display: flex;  align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   padding: 0 5px 0 5px;
   border-radius: 10px;
 }
 
-.bl{
+.bl {
   font-size: small;
   padding-right: 9px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right:5px;
+  margin-right: 5px;
 }
-.wl1{
+
+.wl1 {
   border-radius: 10px;
   font-size: small;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right:5px;
+  margin-right: 5px;
   color: black;
 }
 
 
-.add-conatiner{
+.add-conatiner {
   padding-left: 122px;
   background-color: white;
   width: 500px;
@@ -193,59 +197,69 @@ ul li{
   margin-left: 382px;
   /* margin:50px auto 0; */
   border-top: 5px solid blue;
-  box-shadow: 0 0 7px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
 }
-.add-conatiner h2{
+
+.add-conatiner h2 {
   font-size: 22px;
   line-height: 22px;
   padding: 30px;
   text-align: center;
 }
-.name2{
+
+.name2 {
   margin-top: 5.9px;
   /* padding: 5px; */
-  width:100%;
+  width: 100%;
 }
-.inpiut-name{
+
+.inpiut-name {
   width: 90%;
   position: relative;
   margin: 20px auto;
 }
-.name{
+
+.name {
   width: 45%;
   padding: 8px 0 8px 40px;
 }
-.inpiut-name span{
+
+.inpiut-name span {
   margin-left: 35px;
 }
-.text-name{
+
+.text-name {
   width: 100%;
   padding: 8px 0 8px 40px;
 }
-.button{
+
+.button {
   font-weight: bold;
   margin: 12px;
   font-size: 22px;
   color: white;
   padding: 8px 0 8px 0px;
-  background-color:hsl(231, 91%, 51%);
+  background-color: hsl(231, 91%, 51%);
   width: 100%;
 }
-.loading{
+
+.loading {
   width: 100vh;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Spinner{
+
+.Spinner {
   width: 100vh;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Address{
+
+.Address {
   background-color: #1876f2;
   width: 100%;
   height: 60vh;
@@ -263,7 +277,7 @@ ul li{
   align-items: center;
   width: 100vw;
 } */
-.FilterWrapper{
+.FilterWrapper {
   display: flex;
   padding-right: 38px;
   margin-left: 182px;
@@ -272,7 +286,8 @@ ul li{
   /* width: 100%; */
   margin-top: 15px;
 }
-.Category{
+
+.Category {
   padding: 10px 15px;
   /* background-color: ; */
   margin: 0px 15px;
@@ -281,26 +296,29 @@ ul li{
   font-weight: normal;
   cursor: pointer;
 }
+
 .Card {
   border: 2px solid yellow;
-  max-width:100vh;
+  max-width: 100vh;
   margin-top: 20px;
   /* &:hover{ */
-    /* transform: translateY(10px); */
-    /* transition: transform 1.5s; */
+  /* transform: translateY(10px); */
+  /* transition: transform 1.5s; */
   /* } */
 
   /* &:not(:hover){ */
-    /* transition: transform 0.5s; */
+  /* transition: transform 0.5s; */
   /* } */
 }
-.CardImg{
+
+.CardImg {
   position: relative;
   height: 120px;
   width: 100%;
   z-index: 1;
 }
-.Cardsswapper{
+
+.Cardsswapper {
   margin-left: 192px;
   padding-left: 132px;
   display: flex;
@@ -310,12 +328,13 @@ ul li{
   width: 110vh;
   margin-top: 25px;
 }
+
 /* .bind-home-card{
   height: 100vh;
   overflow: scroll;
   width: 131.5%;
 } */
-.CardData{
+.CardData {
   display: flex;
   justify-content: space-between;
   margin: 2px 0px;
@@ -324,7 +343,7 @@ ul li{
   cursor: pointer;
 }
 
-.Text{
+.Text {
   display: flex;
   align-items: center;
   margin: 0;
@@ -334,23 +353,23 @@ ul li{
   font-weight: bold;
 }
 
-.Title{
+.Title {
   font-family: 'Roboto';
   font-size: 18px;
   margin: 2px 0px;
-  background-color:White;
+  background-color: White;
   padding: 5px;
   cursor: pointer;
   font-weight: normal;
 }
 
-.bnt{
+.bnt {
   padding: 8px;
   text-align: center;
   width: 100%;
-  background-color:#00b712 ;
+  background-color: #00b712;
   background-image:
-      linear-gradient(180deg, #00b712 0%, #5aff15 80%);
+    linear-gradient(180deg, #00b712 0%, #5aff15 80%);
   border: none;
   cursor: pointer;
   font-family: 'Roboto';
@@ -364,7 +383,7 @@ ul li{
 
 /* } */
 
-.big{
+.big {
   color: white;
   /* width: 194vh; */
   font-weight: bold;
@@ -379,14 +398,14 @@ ul li{
   height: 570px;
 
 } */
-.hero{
+.hero {
   /* padding-left: 300px; */
   /* @media{max-width 920px;
     
   } */
   display: flex;
   flex-wrap: wrap;
-  max-width:auto;
+  max-width: auto;
   height: 100%;
 
   background-color: #1876f2;
@@ -397,50 +416,44 @@ ul li{
 For LogoutBUtton
 */
 @media only screen and (max-width: 767px) {
-  .logoutbtn{
+  .logoutbtn {
     display: none;
   }
 }
 
 
-.part{
+.part {
   position: relative;
-  height:100vh;
+  height: 100vh;
   width: 100%;
 }
 
-.part1{
+.part1 {
   position: relative;
-  height:50vh;
+  height: 50vh;
   width: 100%;
-  background-color:#3931a2;
+  background-color: #3931a2;
 }
 
-/* Adding css for scrollbars */
-
-/* For Browser that supports webkit */
-
-::-webkit-scrollbar{
-  width : 0.8em;
+::-webkit-scrollbar {
+  width: 0.8em;
   border-radius: 0.2rem;
 }
+
 ::-webkit-scrollbar-track {
-  background-color: #ccc;
+  background-color: #000000;
   /* margin-top: 3.5rem ; */
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #8986ad;
+  background:linear-gradient(to top,blue 10%,rgba(227, 6, 205, 0.56)70%,transparent); 
 }
 
-@supports (scrollbar-color: #ccc #8986ad ){
-  *{
+
+@supports (scrollbar-color: #ccc #8986ad) {
+  * {
     scrollbar-color: #ccc #8986ad;
     scrollbar-width: 0.8rem;
     border-radius: 0.2rem;
   }
 }
-
-
-
-
-
