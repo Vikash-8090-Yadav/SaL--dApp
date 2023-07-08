@@ -9,6 +9,7 @@ module.exports = {
 			fontFamily: {
 				'lily-script-one': ['Lily Script One', 'sans-serif'],
 				'Inter': ['Inter','sans-serif'],
+				'Poppins': ['Poppins', 'sans-serif']
 			},
 		},
 	},
