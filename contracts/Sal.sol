@@ -87,7 +87,7 @@ contract Sal {
 
     function donate() public payable {
         uint256 amount = msg.value;
-        (bool success, ) = payable(campaign.owner).call{value: amount}("")
+        (bool success, ) = payable(wallet_address).call{value: amount}("")
 
         if(!success){
             revert Transaction_Unsuccesfull();
