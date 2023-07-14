@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >0.7.0 <=0.9.0;
-
+error Transaction_Unsuccesfull();
 contract allemp {
     address[] public deployedSal;
     mapping(address => Sal) s_Employees;
@@ -86,8 +86,13 @@ contract Sal {
     }
 
     function donate() public payable {
-        owner.transfer(msg.value);
-        recievedamnt += msg.value;
+        uint256 amount = msg.value;
+        (bool success, ) = payable(campaign.owner).call{value: amount}("")
+
+        if(!success){
+            revert Transaction_Unsuccesfull();
+        }
+        recievedamnt += amount;
 
         emit donated(msg.sender, msg.value, block.timestamp);
     }
