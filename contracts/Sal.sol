@@ -44,6 +44,11 @@ contract allemp {
             _Position
         );
     }
+
+    function getEmployee(address _employeeAddress) public returns (Sal) {
+        Sal memory employee = s_Employees[_employeeAddress];
+        return employee;
+    }
 }
 
 contract Sal {
