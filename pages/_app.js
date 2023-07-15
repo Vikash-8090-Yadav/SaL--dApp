@@ -104,7 +104,7 @@ function MyApp({ Component, pageProps = {} }) {
                     <div className='big bg-indigo-800'></div>
                     
                     <WagmiConfig client={wagmiClient}>
-                      <Navbar handleLogout={handleLogout}/>
+                      {/* <Navbar handleLogout={handleLogout}/> */}
                       <Layout>
                         <Component {...pageProps} />
                       </Layout>      
