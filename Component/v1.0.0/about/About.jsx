@@ -6,6 +6,11 @@ import styled from "styled-components";
 const MyDiv = styled.div`
   width: 686px;
   height: 234px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const About = () => {
@@ -16,10 +21,10 @@ const About = () => {
           About Us
         </div>
         <div className="flex justify-center pl-20 pr-20">
-          <div className="mt-[-45px]">
+          <div className="md:mt-[-45px]">
             <Image src={AboutIcon} alt="about-icon"></Image>
           </div>
-          <MyDiv className="font-Inter text-xl text-[#000000] font-normal leading-10 pt-20">
+          <MyDiv className="font-Inter text-xl text-[#000000] font-normal leading-10 md:pt-20 pt-5">
             The Sal-dApp provides an efficient platform for organizational
             administrators to effectively oversee and manage their employees'
             salaries by adding them as users and securely storing their
