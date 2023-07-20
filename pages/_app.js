@@ -152,11 +152,11 @@ function MyApp({ Component, pageProps = {} }) {
                           </button>
                         </div>
                 
-                        <div className = "input-button flex">
-                          <button onClick={() => login('google')} type='button' className = "w-full py-3 flex justify-center gap-5">
+                        <div className = "input-button flex justify-center">
+                          <button onClick={() => login('google')} type='button' className = "mr-10 py-3 flex justify-center gap-5">
                             <Image src={'/assets/google.svg'} width = "37" height = "37" alt="google-sign-in" />
                           </button>
-                          <button onClick={() => login('github')} type='button' className = "w-full py-3 flex justify-center gap-5">
+                          <button onClick={() => login('github')} type='button' className = "ml-10 py-3 flex justify-center gap-5">
                           <Image src={'/assets/github.svg'} width = "37" height = "37" alt="github-sign-in" />
                           </button>
                         </div>
