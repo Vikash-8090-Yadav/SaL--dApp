@@ -6,6 +6,7 @@ import Problem from "./v1.0.0/problemsolved/Problem";
 import Footer from "./v1.0.0/footer/footer";
 import BuyMeCoffee from "./v1.0.0/BuyMeCoffee/BuyMeCoffee";
 import Stuck from "./v1.0.0/stuck/Stuck";
+import HappyClient from "./v1.0.0/happyClient/HappyClient";
 
 export default function Layout({ children }) {
 
@@ -23,6 +24,7 @@ export default function Layout({ children }) {
         <Hero/>   
         <About/> 
         <Problem/>
+        <HappyClient/>
         <BuyMeCoffee/>
         <Stuck/>
         <Footer/>
