@@ -76,6 +76,8 @@ function HappyClient() {
     speed: 500,
     slidesToScroll: 1,
     slidesToShow: isSmallScreen ? 1 : 3, // Show one item at a time on small screens, three items on larger screens
+    autoplay: true,
+    autoplaySpeed: 4000, // 4 seconds
   };
 
   return (
