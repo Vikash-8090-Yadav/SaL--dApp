@@ -48,56 +48,56 @@ const SideNavbar = () => {
           <div className="flex flex-col items-start mt-6">
           <div className = {getNavItemClasses}>
           
-            <Link href = "/addemp">
+            <Link href = "/addemp#lms">
               <a className = {`${pathname === "/addemp" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <MdPersonAddAlt1 size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Add Employee</span>
               </a>
             </Link>
               
-            <Link href = "/emplist">
+            <Link href = "/emplist#lms">
               <a className = {`${pathname === "/emplist" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <FaClipboardList size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Employee List</span>
               </a>
             </Link>
 
-            <Link href = "/empsal">
+            <Link href = "/empsal#lms">
               <a className = {`${pathname === "/empsal" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}> 
                 <GiWallet size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Pay Salary</span>
               </a>
             </Link>
 
-            <Link href = "/contractbal">
+            <Link href = "/contractbal#lms">
               <a className = {`${pathname === "/contractbal" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <FaFileInvoiceDollar size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Contract Balance</span>
               </a>
             </Link>
 
-            <Link href = "/">
+            <Link href = "/#lms">
               <a className = {`${pathname === "/announcements" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <ImBullhorn size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Important Announcement</span>
               </a>
             </Link>
 
-            <Link href = "/">
+            <Link href = "/#lms">
               <a className = {`${pathname === "/latestnews" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <IoNewspaper size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Latest News</span>
               </a>
             </Link>
 
-            <Link href = "/">
+            <Link href = "/#lms">
               <a className = {`${pathname === "/contactform" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <RiContactsFill size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Contact Form</span>
               </a>
             </Link>
 
-            <Link href = "/">
+            <Link href = "/#lms">
               <a className = {`${pathname === "/settings" ? activeNavItemClasses : null} py-4 px-3 items-center w-full h-full`}>
                 <MdSettings size={25} style={{display: "inline-block"}}/>
                 <span className = "m-5 max-sm:hidden">Settings</span>

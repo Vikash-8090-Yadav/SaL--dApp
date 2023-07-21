@@ -25,7 +25,7 @@ export default function Layout({ children }) {
 
           <Carousel />
         </div>
-        <lms className="h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
+        <lms className="h-screen flex flex-row justify-start" id="lms"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
           <SideNavbar />
           <div className="flex-1 p-4 text-white bg-gray-300 ">
             <Mainc>{children}</Mainc>
