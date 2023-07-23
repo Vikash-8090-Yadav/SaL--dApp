@@ -60,6 +60,14 @@ ul li {
   }
 }
 
+.slick-track {
+  margin-bottom: 20px;
+}
+
+/* .slick-dots {
+  bottom: -40px;
+} */
+
 .slick-slide>div {
   margin: 0 30px;
 }
@@ -68,10 +76,18 @@ ul li {
   margin-left: 0;
 }
 
-.slick-list {
+/* .slick-list {
   margin-right: -30px;
+} */
+
+.slick-dots li.slick-active button:before {
+  color:White !important;
+  font-weight: 700;
 }
 
+.slick-dots li button:before{
+  color: white !important;
+}
 
 /* Added the  styles for the main component */
 
