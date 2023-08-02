@@ -214,6 +214,11 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
   <img src="https://contrib.rocks/image?repo=Vikash-8090-Yadav/SaL--dApp" />
 </a>
 
+## 🌐 Socials:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/vikash-kumar-yadav-8090)  [![Twitter](https://img.shields.io/badge/Twitter-1D9BF0.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=vikash_8090_b) 
+[![GMail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](yadav621gzp@gmail.com)
+
 
 ## Project Contributor (Member)
 
@@ -230,6 +235,7 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 
 </tr>
 </table>
+
 
 <p align = "center">
 Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> to this repo
