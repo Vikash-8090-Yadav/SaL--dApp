@@ -217,7 +217,7 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 ## 🌐 Socials:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/vikash-kumar-yadav-8090)  [![Twitter](https://img.shields.io/badge/Twitter-1D9BF0.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=vikash_8090_b) 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://discord.com/invite/jasonkd213)
+[![GMail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](yadav621gzp@gmail.com)
 
 
 ## Project Contributor (Member)
