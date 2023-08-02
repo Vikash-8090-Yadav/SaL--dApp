@@ -90,7 +90,7 @@ The Sal-dApp provides an efficient platform for organizational administrators to
     </tr>
     <tr>
       <td>Vercel</td>
-      <td> https://sa-l-d-app.vercel.app/</td>
+      <td> https://sa-l-d-app-git-vikash-8090-yadav-patch-5-vikash-8090-yadav.vercel.app/</td>
     </tr>
     <tr>
       <td>Replit</td>
