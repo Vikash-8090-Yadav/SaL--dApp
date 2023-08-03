@@ -16,6 +16,10 @@ contract allemp{
         uint indexed timestamp,
         string indexed Position
     );
+    
+     constructor() {
+        deployedSal = new address[](0);
+    }
 
     function addemp (
         string memory _FirstName,
