@@ -25,6 +25,7 @@ contract allemp{
         string memory _image,
         string memory _Position)
         public {
+        require(bytes(_wallet_ddress).length == 20 && _wallet_ddress != address(0), "Invalid wallet address!");
         Sal newSal= new Sal(
             _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
         );
