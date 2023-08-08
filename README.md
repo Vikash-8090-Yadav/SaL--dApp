@@ -151,7 +151,6 @@ We are thrilled to be participating in the hackathon under the Ethereum track wi
 We are thrilled to be participating in the hackathon under the Repl.it track and utilizing the power of this free, open-source platform to seamlessly integrate the latest languages and technologies such as Node.js, JavaScript, MERN, Next.js, and React.js into our project. We have chosen to build our project using Next.js (Node.js) and have written all of our smart contract code in Solidity and JSX on Repl.it. While we faced some challenges, such as issues with replit.nix file integration and determining the proper entry point for our project, we were able to overcome these obstacles through utilizing the extensive documentation available on Repl.it. We are proud to announce that we have successfully deployed our project on Repl.it.
 
 <br>
-<a href="#top">Back to top</a>
 
 ## 🛠️Technologies we used
 
@@ -206,7 +205,6 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 
 <br >
 </div>
-<a href="#top">Back to top</a>
 
 ## Project Contributors
 
@@ -241,4 +239,4 @@ We appreciate your contributions and thank you for helping us improve Algo-Media
 Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> to this repo
 </p>
 </div>
-<a href="#top">Back to top</a>
+<a href="#top">Back to top ⬆️</a>
