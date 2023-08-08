@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import confused from "./images/confused.jpg"  
+import Contributor from './Contributor'
 function Contact() {
   return (
     <>
@@ -55,6 +56,7 @@ function Contact() {
           </div>
         </div>
       </div>
+        <Contributor/>
     </div>
     </>
   )
