@@ -10,6 +10,7 @@
   
 ## How to Run Locally
 
+
 To run the Sal-dApp locally, follow these steps:
 1. Clone the repository:
  ```bash
