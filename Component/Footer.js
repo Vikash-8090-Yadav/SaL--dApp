@@ -9,16 +9,25 @@ function Footer() {
         <div className = "max-w-7xl mx-auto">
 
           <div className = "flex gap-2 justify-between max-md:flex-col max-md:text-center">   
-            <div className = "mb-5">
+            <div className = "mb-5 w-full">
               <h4 className = "text-3xl pb-4 font-bold font-title">
                 Meta
                 <span className = "text-blue-400">.eth</span>
               </h4>
               <p className = "text-gray-500 pb-2">Join 25,000+ others and never miss out our Latest Updates.</p>
-              <form action = "" className = "flex flex-row max-sm:flex-col max-sm:items-center">
-                <input type = "text" className = "text-gray-500 w-2/3 p-2 focus:border-blue-400 max-sm:mb-2" placeholder = "Enter your email" />
-                <button className = "bg-blue-500 hover:bg-blue-700 duration-300 w-1/3 p-2 font-semibold">Subscribe</button>
-              </form>
+              <form
+        action=''
+        className='flex flex-row w-full max-sm:flex-col max-sm:items-start max-sm:p-2'
+      >
+        <input
+          type='text'
+          className='text-gray-500 w-2/3 p-2 focus:border-blue-400 max-sm:mb-2 rounded-md'
+          placeholder='Enter your email'
+        />
+        <button className='overflow-hidden rounded-md bg-blue-500 hover:bg-blue-700 duration-300  w:w-min p-2 font-semibold max-sm:ml-0 ml-7'>
+          Subscribe
+        </button>
+      </form>
             </div>
 
             <div className = "flex justify-between">
