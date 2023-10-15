@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >0.7.0 <=0.9.0;
-
-
-
-contract allemp{
-
-    address [] public deployedSal;
+error Transaction_Unsuccesfull();
+contract allemp {
+    address[] public deployedSal;
+    mapping(address => Sal) s_Employees;
 
     event salcreated(
         string FirstName,
@@ -17,25 +15,43 @@ contract allemp{
         string indexed Position
     );
 
-    function addemp (
+    function addemp(
         string memory _FirstName,
         string memory _LastName,
         string memory _wallet_ddress,
         string memory _Country,
         string memory _image,
-        string memory _Position)
-        public {
-        Sal newSal= new Sal(
-            _FirstName,_LastName,_wallet_ddress,_Position,_Country,_image
+        string memory _Position
+    ) public {
+        Sal newSal = new Sal(
+            _FirstName,
+            _LastName,
+            _wallet_ddress,
+            _Position,
+            _Country,
+            _image
         );
         deployedSal.push(address(newSal));
+        s_Employees[address(newSal)] = newSal;
 
-        emit salcreated(_FirstName,_LastName,msg.sender,address(newSal),_image, block.timestamp,_Position);
+        emit salcreated(
+            _FirstName,
+            _LastName,
+            msg.sender,
+            address(newSal),
+            _image,
+            block.timestamp,
+            _Position
+        );
+    }
+
+    function getEmployee(address _employeeAddress) public returns (Sal) {
+        Sal memory employee = s_Employees[_employeeAddress];
+        return employee;
     }
 }
 
-
-contract Sal{
+contract Sal {
     string public FirstName;
     string public LastName;
     string public wallet_address;
@@ -46,8 +62,11 @@ contract Sal{
     uint public recievedamnt;
     address payable public owner;
 
-
-    event donated(address indexed donar , uint indexed amount , uint indexed timestamp);
+    event donated(
+        address indexed donar,
+        uint indexed amount,
+        uint indexed timestamp
+    );
 
     constructor(
         string memory _FirstName,
@@ -56,24 +75,25 @@ contract Sal{
         string memory _Position,
         string memory _Country,
         string memory _image
-    )
-    {
+    ) {
         FirstName = _FirstName;
         LastName = _LastName;
         wallet_address = _wallet_ddress;
-        Position =_Position;
-        Country =_Country;
+        Position = _Position;
+        Country = _Country;
         image = _image;
         owner = payable(msg.sender);
-
-
     }
 
-    function donate () public payable {
-        owner.transfer(msg.value);
-        recievedamnt+=msg.value;
+    function donate() public payable {
+        uint256 amount = msg.value;
+        (bool success, ) = payable(wallet_address).call{value: amount}("")
 
-        emit donated(msg.sender , msg.value ,block.timestamp);
+        if(!success){
+            revert Transaction_Unsuccesfull();
+        }
+        recievedamnt += amount;
+
+        emit donated(msg.sender, msg.value, block.timestamp);
     }
-
 }
